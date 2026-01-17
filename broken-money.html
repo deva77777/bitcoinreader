@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Book Summaries - Broken Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #e11d48, #fb7185);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Wealth<span class="gradient-text">BookSummaries</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">30 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-rose-50 via-pink-50 to-red-50 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-sm font-medium mb-4">Modern Monetary Analysis</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Broken Money</h1>
+                    <p class="text-xl text-gray-600 mb-4">Why Our Financial System Is Failing Us and How We Can Make It Better</p>
+                    <p class="text-gray-500 mb-6">By <span class="font-semibold text-gray-700">Lyn Alden</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">💔 Monetary Crisis</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">🌍 Global Finance</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">₿ Bitcoin</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl p-6 shadow-2xl book-cover-animation">
+                        <div class="bg-white rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">💔</div>
+                            <div class="font-serif font-bold text-gray-900 leading-tight">Broken Money</div>
+                            <div class="text-xs text-gray-500 mt-2">Lyn Alden</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Lyn Alden's "Broken Money" is a comprehensive and accessible exploration of why the global monetary system is failing. She traces money's evolution from ancient commodity systems through the gold standard, Bretton Woods, and into our current era of unbacked fiat currencies. Alden explains how technological constraints have historically shaped money, why the current system is breaking down, and how new technologies like Bitcoin offer a potential solution. Unlike many Bitcoin books, this one is rigorous, data-driven, and appeals to both traditional finance professionals and crypto enthusiasts.
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">What Is Money?</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">The Hardness Spectrum</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Long Arc of Monetary History</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">How Money Became Broken</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">The Global Dollar System</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-rose-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">Bitcoin as a Solution</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">What Is Money? A Technical Perspective</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden begins by defining money not philosophically, but <strong>technically</strong>. Money is a tool—a ledger technology for tracking who owes what to whom. Before money, humans used mental ledgers in small tribes (favors, debts). As societies grew, we needed external ledgers.
+                </p>
+                
+                <div class="bg-rose-50 p-6 rounded-xl mb-6 border border-rose-100">
+                    <h4 class="font-bold text-rose-900 mb-4">📊 The Three Types of Money Ledgers</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">🪨</div>
+                            <h5 class="font-bold text-sm">Commodity Money</h5>
+                            <p class="text-xs text-gray-600">The ledger is the physical object itself (gold, shells). No counterparty risk.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">📜</div>
+                            <h5 class="font-bold text-sm">Credit Money</h5>
+                            <p class="text-xs text-gray-600">The ledger is a claim on something else (bank deposits, bonds). Has counterparty risk.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">💻</div>
+                            <h5 class="font-bold text-sm">Digital Bearer Asset</h5>
+                            <p class="text-xs text-gray-600">A new category: digital but no counterparty (Bitcoin). Combines the best of both.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-rose-50 p-6 rounded-r-xl mb-6 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Money is fundamentally a <strong>ledger technology</strong>. The evolution of money tracks the evolution of ledger technology—from physical objects, to paper claims, to centralized databases, and now to decentralized blockchains.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Hardness Spectrum</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden introduces the concept of monetary "hardness" on a spectrum. Hard money is difficult to produce more of; soft money is easy to inflate. This isn't binary—it's a continuum.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">📈 The Hardness Spectrum</h4>
+                    <div class="relative">
+                        <div class="h-4 bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 rounded-full mb-4"></div>
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>HARDEST</span>
+                            <span>SOFTEST</span>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2 mt-4 text-center text-xs">
+                            <div class="bg-green-100 p-2 rounded">Bitcoin<br/>(21M cap)</div>
+                            <div class="bg-green-50 p-2 rounded">Gold<br/>(~1.5%/yr)</div>
+                            <div class="bg-yellow-50 p-2 rounded">Silver<br/>(~2%/yr)</div>
+                            <div class="bg-orange-50 p-2 rounded">Fiat $<br/>(~7%/yr avg)</div>
+                            <div class="bg-red-50 p-2 rounded">Weimar Mark<br/>(∞)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden emphasizes that the "right" hardness depends on context. In periods of rapid population and productivity growth, slightly softer money might work. But when growth slows and debts pile up, the system breaks—which is where we are now.
+                </p>
+
+                <div class="key-point bg-rose-50 p-6 rounded-r-xl mb-6 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The current fiat system worked during high-growth decades (1950s-1990s). But as productivity growth has slowed, the system requires ever-more debt and money printing to sustain itself. We've reached the limits.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Long Arc of Monetary History</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden provides a sweeping history of money, but with a unique lens: she focuses on the <strong>technological constraints</strong> that shaped each era's monetary system.
+                </p>
+
+                <div class="space-y-4 mb-6">
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-amber-100 text-amber-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">🏺</div>
+                            <div>
+                                <h4 class="font-bold">Ancient Era: Commodity Money</h4>
+                                <p class="text-sm text-gray-600">Gold, silver, and copper coins. Limited by the speed of physical transport. Local and regional economies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 text-blue-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">🏦</div>
+                            <div>
+                                <h4 class="font-bold">Industrial Era: Gold + Paper</h4>
+                                <p class="text-sm text-gray-600">The telegraph enabled faster communication than physical gold transport. Banks issued paper claims. Gold settled between banks/nations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 text-green-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">🌐</div>
+                            <div>
+                                <h4 class="font-bold">Digital Era: Pure Fiat</h4>
+                                <p class="text-sm text-gray-600">Instant global communication made gold's slowness unbearable. Money became pure information—but centralized and corruptible.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-100 text-orange-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">₿</div>
+                            <div>
+                                <h4 class="font-bold">Crypto Era: Digital Hard Money</h4>
+                                <p class="text-sm text-gray-600">Bitcoin solves the speed problem while retaining hardness. Digital gold that moves at the speed of light.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-rose-50 p-6 rounded-r-xl mb-6 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Each monetary system was constrained by the communication technology of its time. The fiat era emerged because gold couldn't keep up with electronic communication. Bitcoin is the first money that combines digital speed with commodity-like hardness.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">How Money Became Broken</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden provides a detailed and nuanced account of how we went from gold-backed money to our current broken system. Key turning points:
+                </p>
+
+                <div class="bg-red-50 border border-red-200 p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-red-800 mb-4">💥 Breaking Points</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">1914</span>
+                            <span><strong>World War I:</strong> Nations suspended gold convertibility to print money for war. The classical gold standard dies.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">1944</span>
+                            <span><strong>Bretton Woods:</strong> US dollar becomes world reserve currency, backed by gold. Other currencies peg to the dollar.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">1971</span>
+                            <span><strong>Nixon Shock:</strong> US closes the gold window. All money becomes unbacked fiat. The "petrodollar" system emerges.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">2008</span>
+                            <span><strong>Financial Crisis:</strong> The system nearly collapses. Central banks begin QE (money printing) as permanent policy.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded text-xs font-bold">2020</span>
+                            <span><strong>COVID Response:</strong> $5 trillion printed in months. Inflation spikes. Trust in the system erodes further.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden is careful to note that this wasn't a conspiracy—it was a series of pragmatic decisions by people facing real constraints. But the cumulative effect has been disastrous. The system now requires constant intervention to avoid collapse.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Global Dollar System & Its Victims</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    One of Alden's most important contributions is showing how the dollar system affects people in <strong>developing countries</strong>. While Americans experience mild inflation, people in Nigeria, Argentina, Lebanon, and Turkey experience currency crises regularly.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🇺🇸</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Developed World Experience</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Stable currency (relatively)</li>
+                            <li>• Access to banking</li>
+                            <li>• Can invest in stocks/bonds</li>
+                            <li>• Inflation is annoying but manageable</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🌍</div>
+                        <h4 class="font-bold text-red-800 mb-2">Developing World Experience</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Currency can collapse overnight</li>
+                            <li>• Limited banking access</li>
+                            <li>• Savings wiped out regularly</li>
+                            <li>• No escape from broken local currency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-rose-50 p-6 rounded-r-xl mb-6 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">4 billion people live in countries with dysfunctional monetary systems. For them, Bitcoin isn't speculation—it's a lifeline. Alden emphasizes this human element often missing from financial discussions.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Bitcoin as a Solution</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden approaches Bitcoin not as a maximalist, but as an engineer and analyst. She evaluates it based on its technical properties and how it solves specific problems in the current system.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-rose-400 mb-4 text-xl">₿ Why Bitcoin Fixes Broken Money</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-rose-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Digital Scarcity</h5>
+                                <p class="text-gray-300">For the first time, we have a digital asset that cannot be copied or inflated. 21 million forever.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-rose-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">Global Settlement</h5>
+                                <p class="text-gray-300">Unlike gold, Bitcoin can settle globally in minutes. It solves gold's speed problem.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-rose-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Permissionless Access</h5>
+                                <p class="text-gray-300">Anyone with internet access can use it. No bank account needed. Critical for the unbanked billions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-rose-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <h5 class="font-bold">Neutral & Apolitical</h5>
+                                <p class="text-gray-300">Not controlled by any nation. A truly global, neutral monetary network.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Alden acknowledges Bitcoin's challenges—volatility, scaling, energy concerns—but addresses each with data and nuance. She sees Bitcoin as a long-term monetary evolution, not a get-rich-quick scheme.
+                </p>
+
+                <div class="key-point bg-rose-50 p-6 rounded-r-xl mb-6 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Bitcoin is the first monetary system in history that combines the hardness of gold with the speed of digital payments and the accessibility of cash."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500 card-hover">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-bold text-lg mb-2">Money is Ledger Technology</h3>
+                    <p class="text-gray-600">Understanding money as a ledger clarifies its evolution and Bitcoin's innovation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500 card-hover">
+                    <div class="text-3xl mb-3">⚖️</div>
+                    <h3 class="font-bold text-lg mb-2">Hardness is a Spectrum</h3>
+                    <p class="text-gray-600">Money exists on a continuum from hard (scarce) to soft (inflationary). The current system has become too soft.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500 card-hover">
+                    <div class="text-3xl mb-3">🌍</div>
+                    <h3 class="font-bold text-lg mb-2">Billions Are Suffering</h3>
+                    <p class="text-gray-600">The developing world bears the brunt of broken money. Bitcoin offers them an escape.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500 card-hover">
+                    <div class="text-3xl mb-3">🔧</div>
+                    <h3 class="font-bold text-lg mb-2">Bitcoin Solves Real Problems</h3>
+                    <p class="text-gray-600">It combines the hardness of gold with the speed of digital payments. A genuine technological breakthrough.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "Broken Money" is perhaps the best bridge between traditional finance and Bitcoin. Lyn Alden writes with the rigor of a Wall Street analyst and the clarity of a gifted teacher. Whether you're skeptical of Bitcoin or already convinced, this book will deepen your understanding of why our monetary system is failing and what might come next.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Essential Modern Classic</div>
+                        <div class="text-gray-400">The best book for understanding the monetary crisis.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Wealth<span class="text-orange-400">BookSummaries</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <div class="flex justify-center gap-6 mb-6 text-sm flex-wrap">
+                <a href="privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition">About</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2024 WealthBookSummaries. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

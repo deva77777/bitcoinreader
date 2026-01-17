@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - The Price of Tomorrow</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #0d9488, #06b6d4);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">22 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-teal-50 via-cyan-50 to-sky-50 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium mb-4">Technology & Economics</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">The Price of Tomorrow</h1>
+                    <p class="text-xl text-gray-600 mb-4">Why Deflation is the Key to an Abundant Future</p>
+                    <p class="text-gray-500 mb-6">By <span class="font-semibold text-gray-700">Jeff Booth</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">🤖 Technology</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">📉 Deflation</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">💡 Abundance</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl p-6 shadow-2xl book-cover-animation">
+                        <div class="bg-white rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">🚀</div>
+                            <div class="font-serif font-bold text-gray-900 leading-tight">The Price of Tomorrow</div>
+                            <div class="text-xs text-gray-500 mt-2">Jeff Booth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Jeff Booth argues that technology is inherently <strong>deflationary</strong>—it naturally drives prices down and creates abundance. However, our debt-based economic system requires constant growth and inflation to survive. This creates a fundamental conflict: we are fighting the natural force of technology with ever-increasing debt, leading to a world where we must choose between <strong>deflation</strong> (accepting abundance) or <strong>hyperinflation</strong> (system collapse). Booth makes the case that embracing deflation, enabled by technologies like Bitcoin, is the path to a prosperous future.
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">Technology is Deflationary</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">The Debt Trap</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Coming Disruption</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">The Great Divide</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">Two Paths Forward</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-teal-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">Embracing Abundance</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Technology is Deflationary</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Jeff Booth opens with a simple but profound observation: technology makes things cheaper. This is not a bug—it's the entire point. From agriculture to manufacturing to information, technology's purpose is to do more with less.
+                </p>
+                
+                <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-xl mb-6 border border-teal-100">
+                    <h4 class="font-bold text-teal-900 mb-4">📉 Examples of Technological Deflation</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">📸</div>
+                            <h5 class="font-bold text-sm">Photography</h5>
+                            <p class="text-xs text-gray-600">From expensive film & development to essentially free digital photos.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">📞</div>
+                            <h5 class="font-bold text-sm">Communication</h5>
+                            <p class="text-xs text-gray-600">Long-distance calls went from $1/minute to free via internet.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">🎵</div>
+                            <h5 class="font-bold text-sm">Music</h5>
+                            <p class="text-xs text-gray-600">From $15 CDs to unlimited streaming for $10/month.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl mb-2">💡</div>
+                            <h5 class="font-bold text-sm">Lighting</h5>
+                            <p class="text-xs text-gray-600">An hour of light cost 6 hours of work in 1800; today it's a fraction of a second.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-teal-50 p-6 rounded-r-xl mb-6 border-l-4 border-teal-500">
+                    <h4 class="font-bold text-teal-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Technology follows an exponential curve. Moore's Law (computing power doubles every ~2 years) applies across many fields. This means the rate of deflation will <strong>accelerate</strong>, not slow down.</p>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    If technology naturally makes things cheaper, why don't we see falling prices everywhere? Because, Booth argues, we are actively <strong>fighting</strong> this natural deflation with money printing and debt.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Debt Trap: Fighting Deflation</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Our economic system is built on debt. Money is created when banks issue loans. This system requires perpetual growth to service the interest on that debt. But what happens when technology is pushing prices <em>down</em> while the system requires them to go <em>up</em>?
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🔄 The Vicious Cycle</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Technology Pushes Prices Down</h5>
+                                <p class="text-gray-600 text-sm">Automation and efficiency make goods cheaper.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">Deflation Threatens Debt</h5>
+                                <p class="text-gray-600 text-sm">Falling prices mean debts become harder to repay (debt deflation).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Governments Print Money</h5>
+                                <p class="text-gray-600 text-sm">Central banks create money to fight deflation and stimulate "growth."</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <h5 class="font-bold">More Debt is Created</h5>
+                                <p class="text-gray-600 text-sm">Low interest rates encourage more borrowing, increasing total debt.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">5</span>
+                            <div>
+                                <h5 class="font-bold">Repeat (at larger scale)</h5>
+                                <p class="text-gray-600 text-sm">Each cycle requires more intervention than the last.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-teal-50 p-6 rounded-r-xl mb-6 border-l-4 border-teal-500">
+                    <h4 class="font-bold text-teal-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Global debt has grown from $84 trillion in 2000 to over $300 trillion today. This isn't a sign of prosperity—it's evidence of a system fighting an unwinnable war against technological deflation.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Coming Disruption: AI, Automation, and Jobs</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth, a tech entrepreneur himself, describes the coming wave of disruption. Artificial intelligence, robotics, and automation are not just incremental improvements—they represent a fundamental shift in how work is done.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6 text-center">
+                    <div class="bg-white p-4 rounded-xl shadow border border-teal-100">
+                        <div class="text-3xl mb-2">🚗</div>
+                        <h5 class="font-bold text-gray-800">Transportation</h5>
+                        <p class="text-xs text-gray-500">Self-driving vehicles will disrupt millions of driving jobs.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow border border-teal-100">
+                        <div class="text-3xl mb-2">🏭</div>
+                        <h5 class="font-bold text-gray-800">Manufacturing</h5>
+                        <p class="text-xs text-gray-500">Robots already outperform humans in speed and precision.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow border border-teal-100">
+                        <div class="text-3xl mb-2">🧠</div>
+                        <h5 class="font-bold text-gray-800">Knowledge Work</h5>
+                        <p class="text-xs text-gray-500">AI is now writing code, analyzing data, and diagnosing diseases.</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The key point isn't that "robots will take all jobs"—it's that technology creates <strong>abundance</strong>. If a robot can make a car for 1/10th the cost, cars become accessible to everyone. The problem is our economic system, which requires employment and wages to distribute resources. If machines do the work, how do people earn money to buy the abundant goods?
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Great Divide: Winners and Losers</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth explains how the current system exacerbates inequality. When central banks print money, it doesn't go to everyone equally. It flows first to asset owners (stocks, real estate), inflating their wealth, while wages stagnate for ordinary workers.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <h4 class="font-bold text-green-800 mb-3">📈 Winners</h4>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>• Asset owners (stocks, real estate)</li>
+                            <li>• Those closest to money creation (banks, corporations)</li>
+                            <li>• Tech companies riding exponential growth</li>
+                            <li>• Anyone who can borrow cheaply</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <h4 class="font-bold text-red-800 mb-3">📉 Losers</h4>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>• Wage earners (salaries don't keep up)</li>
+                            <li>• Savers (inflation destroys purchasing power)</li>
+                            <li>• Small businesses (can't access cheap credit)</li>
+                            <li>• Future generations (inherit the debt)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-teal-50 p-6 rounded-r-xl mb-6 border-l-4 border-teal-500">
+                    <h4 class="font-bold text-teal-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The rise of populism around the world is a symptom, not a cause. People sense the system is rigged, even if they can't articulate why. The real culprit is a monetary system that transfers wealth upward while technology should be spreading abundance downward.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Two Paths Forward: Deflation or Hyperinflation</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth presents a stark choice. The current path of fighting deflation with ever-more debt is unsustainable. Eventually, one of two things must happen:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 p-6 rounded-xl">
+                        <div class="text-4xl mb-3">🌱</div>
+                        <h4 class="font-bold text-teal-800 mb-2">Path 1: Accept Deflation</h4>
+                        <p class="text-gray-700 text-sm mb-4">Allow prices to fall naturally. This would require debt restructuring and a painful transition, but leads to a world of abundance where technology benefits everyone.</p>
+                        <ul class="text-xs text-gray-600 space-y-1">
+                            <li>✓ Savings gain purchasing power</li>
+                            <li>✓ Goods become affordable</li>
+                            <li>✓ Sustainable long-term</li>
+                            <li>✗ Painful debt defaults</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-4xl mb-3">🔥</div>
+                        <h4 class="font-bold text-red-800 mb-2">Path 2: Print Until Collapse</h4>
+                        <p class="text-gray-700 text-sm mb-4">Continue printing money to fight deflation. This delays the pain but makes the eventual collapse worse—potentially leading to hyperinflation and societal breakdown.</p>
+                        <ul class="text-xs text-gray-600 space-y-1">
+                            <li>✓ Delays the reckoning</li>
+                            <li>✗ Currency debasement</li>
+                            <li>✗ Worsening inequality</li>
+                            <li>✗ Eventual systemic failure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth argues that Path 2 is what we are currently on. Every crisis (2008, 2020) is met with more money printing. But you cannot print real wealth—only redistribute it. Eventually, confidence in the currency collapses.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Embracing Abundance: Bitcoin and the Future</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth sees Bitcoin as a potential solution—a technology that enables a graceful transition to a deflationary world. Unlike fiat currency, Bitcoin's supply is fixed. It is designed to gain purchasing power over time, aligning with the natural trajectory of technology.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-teal-400 mb-4 text-xl">₿ Why Bitcoin Fits a Deflationary World</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Fixed Supply</h5>
+                                <p class="text-gray-300">21 million coins, ever. Unlike fiat, it cannot be inflated.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">Rewards Saving</h5>
+                                <p class="text-gray-300">If goods get cheaper in Bitcoin terms, saving becomes rational again.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Global & Neutral</h5>
+                                <p class="text-gray-300">Not controlled by any government, accessible to everyone on Earth.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <h5 class="font-bold">Technology Native</h5>
+                                <p class="text-gray-300">Born of the digital age, suited for an increasingly digital economy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-teal-50 p-6 rounded-r-xl mb-6 border-l-4 border-teal-500">
+                    <h4 class="font-bold text-teal-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The "price of tomorrow" is falling. Technology makes everything cheaper. The question is: will we embrace this abundance with sound money, or will we destroy our economies fighting the inevitable?</p>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Booth is not anti-government or anti-work. He acknowledges the transition will be difficult and require new social structures (perhaps including some form of UBI funded by productivity gains). But the first step is recognizing the root problem: a debt-based money system fighting against technological progress.
+                </p>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-500 card-hover">
+                    <div class="text-3xl mb-3">📉</div>
+                    <h3 class="font-bold text-lg mb-2">Technology = Deflation</h3>
+                    <p class="text-gray-600">The natural result of technological progress is falling prices and increasing abundance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-500 card-hover">
+                    <div class="text-3xl mb-3">💳</div>
+                    <h3 class="font-bold text-lg mb-2">Debt vs. Deflation</h3>
+                    <p class="text-gray-600">Our debt-based system requires inflation to survive. It is fundamentally at war with technological progress.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-500 card-hover">
+                    <div class="text-3xl mb-3">⚖️</div>
+                    <h3 class="font-bold text-lg mb-2">Growing Inequality</h3>
+                    <p class="text-gray-600">Money printing inflates asset prices, benefiting the wealthy while wages stagnate for everyone else.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-500 card-hover">
+                    <div class="text-3xl mb-3">🌅</div>
+                    <h3 class="font-bold text-lg mb-2">Abundance is Possible</h3>
+                    <p class="text-gray-600">With the right monetary framework (like Bitcoin), we can embrace a future where technology benefits everyone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "The Price of Tomorrow" is a wake-up call from a successful entrepreneur who sees the collision course we're on. Jeff Booth doesn't offer easy answers, but he clearly identifies the problem: we are using outdated monetary technology in an age of exponential progress. The book is a compelling case for rethinking our assumptions about money, growth, and what prosperity really means.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Essential Reading</div>
+                        <div class="text-gray-400">A must-read for understanding the future of money and technology.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

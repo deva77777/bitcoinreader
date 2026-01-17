@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - What Has Government Done to Our Money?</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">15 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium mb-4">Economics & Liberty</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">What Has Government Done to Our Money?</h1>
+                    <p class="text-xl text-gray-600 mb-4">The Case for a 100% Gold Dollar</p>
+                    <p class="text-gray-500 mb-6">By <span class="font-semibold text-gray-700">Murray N. Rothbard</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">💰 Sound Money</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">🏛️ Austrian Economics</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">📜 History</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-6 shadow-2xl book-cover-animation">
+                        <div class="bg-white rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">⚖️</div>
+                            <div class="font-serif font-bold text-gray-900 leading-tight">Government & Money</div>
+                            <div class="text-xs text-gray-500 mt-2">Murray Rothbard</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Murray Rothbard's classic manifesto demystifies money, explaining how it arises naturally from the free market and how government intervention destroys it. Rothbard argues that inflation is a hidden tax, central banks are engines of inflation, and the only solution to monetary chaos is a return to sound money—specifically, a gold standard where money is separated from the state.
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-yellow-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">Money in a Free Society</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-yellow-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">Government Meddling</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-yellow-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Monetary Breakdown</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-yellow-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">The Solution</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Money in a Free Society</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Rothbard begins by smashing the myth that money is created by the state. Instead, he explains that money originates from the free market to solve the limitations of barter. In a barter economy, you need a "double coincidence of wants"—if you have eggs and want shoes, you must find a shoemaker who wants eggs.
+                </p>
+                
+                <div class="key-point bg-yellow-50 p-6 rounded-r-xl mb-6 border-l-4 border-yellow-500">
+                    <h4 class="font-bold text-yellow-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Money is simply a commodity that is the most marketable. It is not an abstract unit of account ordained by government, but a tangible good chosen by the market.</p>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Historically, gold and silver became money because they possess specific qualities: they are scarce, durable, divisible, portable, and uniform. When a society adopts a commodity as money, every price becomes expressed in terms of that commodity (e.g., "1 ounce of gold").
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Government Meddling with Money</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Once money is established, governments inevitably try to control it. Why? Because controlling money allows the state to generate revenue without the unpopularity of taxation. Rothbard outlines the steps governments take to seize control:
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+                            <span><strong>Debasement:</strong> Historically, kings would clip coins or dilute the gold content, pocketing the difference.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+                            <span><strong>Legal Tender Laws:</strong> Governments force citizens to accept their debased money at face value, driving good money out of circulation (Gresham's Law).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+                            <span><strong>Central Banking:</strong> The creation of a central bank allows the government to coordinate inflation across the entire banking system, acting as a "lender of last resort" to bail out irresponsible banks.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This leads to <strong>inflation</strong>, which Rothbard defines not as "rising prices" but as "an increase in the money supply." Rising prices are merely the <em>consequence</em> of inflation.
+                </p>
+                
+                <div class="bg-red-50 p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-red-800 mb-2">⚠️ The Hidden Tax</h4>
+                    <p class="text-gray-700">Inflation is a fraudulent transfer of wealth from the public to the government and the early recipients of new money (banks/cronies). It destroys savings and distorts economic calculation.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Monetary Breakdown of the West</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Rothbard traces the devolution of the global monetary system from the classical gold standard to the current fiat chaos.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-2">Phase 1: Classical Gold Standard</h4>
+                        <p class="text-sm text-gray-600">The world used gold as money. Currencies like "dollars" or "pounds" were just names for specific weights of gold. Governments couldn't print money at will.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-2">Phase 2: World War I & Beyond</h4>
+                        <p class="text-sm text-gray-600">Governments suspended redemption to fund the war. After the war, they created a "Gold Exchange Standard" where only nations (not citizens) could redeem currency for gold.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-2">Phase 3: Bretton Woods</h4>
+                        <p class="text-sm text-gray-600">Post-WWII, the US dollar became the world reserve currency, backed by gold, while other currencies were backed by dollars. This gave the US "exorbitant privilege."</p>
+                    </div>
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                        <h4 class="font-bold text-red-800 mb-2">Phase 4: Fiat Money (1971-Present)</h4>
+                        <p class="text-sm text-gray-800">Nixon closed the gold window, ending all backing. Now, all money is paper (or digital) decreed by the state, leading to perpetual inflation and instability.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Solution: Separation of Money and State</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Rothbard concludes that the only way to restore economic sanity is to completely separate money from the state. Money should be a product of the free market, just like shoes or bread.
+                </p>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4 text-xl">🚀 Rothbard's Vision</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>Privatize Money:</strong> Allow private mints to produce gold/silver coins.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>Abolish Central Banks:</strong> End the Federal Reserve and its ability to manipulate the money supply.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>100% Reserve Banking:</strong> Banks should not be allowed to lend out money they don't have (fractional reserve banking is fraud).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-500 card-hover">
+                    <div class="text-3xl mb-3">🏛️</div>
+                    <h3 class="font-bold text-lg mb-2">State Control is the Problem</h3>
+                    <p class="text-gray-600">Government involvement in money is not necessary and is always destructive. It leads to inflation, instability, and war.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-500 card-hover">
+                    <div class="text-3xl mb-3">📉</div>
+                    <h3 class="font-bold text-lg mb-2">Inflation is Theft</h3>
+                    <p class="text-gray-600">Inflation is a hidden tax that benefits the government and its cronies at the expense of the average citizen.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-500 card-hover">
+                    <div class="text-3xl mb-3">🤝</div>
+                    <h3 class="font-bold text-lg mb-2">Money Originates from Barter</h3>
+                    <p class="text-gray-600">Money naturally emerges from the market process; it is not a creation of the state.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-500 card-hover">
+                    <div class="text-3xl mb-3">🔐</div>
+                    <h3 class="font-bold text-lg mb-2">Sound Money is Freedom</h3>
+                    <p class="text-gray-600">A free society requires sound money (like gold) that the government cannot manipulate or print at will.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "What Has Government Done to Our Money?" is a concise yet powerful explanation of monetary theory. Rothbard dismantles the complexities of modern finance to reveal a simple truth: sound money is a prerequisite for a free and prosperous society.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">A Classic</div>
+                        <div class="text-gray-400">The best introduction to Austrian monetary theory</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

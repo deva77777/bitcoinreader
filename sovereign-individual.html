@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - The Sovereign Individual</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #4f46e5, #818cf8);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">32 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-indigo-900 via-purple-900 to-violet-900 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-indigo-800 text-indigo-100 rounded-full text-sm font-medium mb-4">Prophetic / Futurism</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">The Sovereign Individual</h1>
+                    <p class="text-xl text-indigo-200 mb-4">Mastering the Transition to the Information Age</p>
+                    <p class="text-indigo-300 mb-6">By <span class="font-semibold text-white">James Dale Davidson & Lord William Rees-Mogg</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🔮 Predictions</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🌐 Cyberspace</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🏴 Freedom</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-indigo-700 to-purple-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-indigo-600">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">🔮</div>
+                            <div class="font-serif font-bold leading-tight text-sm">The Sovereign Individual</div>
+                            <div class="text-xs text-gray-500 mt-2">Davidson & Rees-Mogg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Written in 1997, "The Sovereign Individual" is one of the most prophetic books of the late 20th century. Davidson and Rees-Mogg predicted the rise of cryptocurrency, remote work, digital nomads, the decline of nation-states, and the empowerment of individuals through technology. They argue that just as the printing press ended the medieval era, the microprocessor will end the industrial nation-state. The future belongs to those who can adapt—the "sovereign individuals" who leverage technology to escape the extractive demands of dying governments.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prediction Box -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-2xl border border-indigo-200">
+                <h3 class="font-bold text-indigo-900 mb-4 text-xl">🎯 Predictions Made in 1997</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-500">✅</span>
+                            <span class="font-bold text-sm">Digital Currency</span>
+                        </div>
+                        <p class="text-xs text-gray-600">"The cybereconomy will use cybercurrency... untraceable and untaxable."</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-500">✅</span>
+                            <span class="font-bold text-sm">Remote Work</span>
+                        </div>
+                        <p class="text-xs text-gray-600">"Work will be done anywhere... the office will become obsolete."</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-500">✅</span>
+                            <span class="font-bold text-sm">Digital Nomads</span>
+                        </div>
+                        <p class="text-xs text-gray-600">"The most successful will become 'Citizens of the World'... living wherever they choose."</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-yellow-500">⏳</span>
+                            <span class="font-bold text-sm">Nation-State Decline</span>
+                        </div>
+                        <p class="text-xs text-gray-600">"Governments will have to treat their citizens as customers... or lose them."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">The Megapolitical Thesis</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">The End of the Nation-State</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">Cyberspace & Cybermoney</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">The Cognitive Elite</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">The Retreat of Welfare</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-indigo-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">Becoming a Sovereign Individual</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Megapolitical Thesis</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The authors introduce their framework: <strong>Megapolitics</strong>—the study of how technology shapes the power relationships between individuals, groups, and governments. They argue that history is not driven primarily by ideas or great leaders, but by the underlying technological realities of violence and production.
+                </p>
+                
+                <div class="bg-indigo-50 p-6 rounded-xl mb-6 border border-indigo-100">
+                    <h4 class="font-bold text-indigo-900 mb-4">🔄 The Four Great Transitions</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded text-sm font-bold flex-shrink-0">1</div>
+                            <div>
+                                <h5 class="font-bold">Hunter-Gatherer → Agricultural</h5>
+                                <p class="text-sm text-gray-600">Farming allowed permanent settlements, surplus, and the first governments (to protect surplus).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded text-sm font-bold flex-shrink-0">2</div>
+                            <div>
+                                <h5 class="font-bold">Agricultural → Feudal</h5>
+                                <p class="text-sm text-gray-600">The stirrup and heavy cavalry gave armored knights dominance, creating feudal hierarchies.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded text-sm font-bold flex-shrink-0">3</div>
+                            <div>
+                                <h5 class="font-bold">Feudal → Industrial/Nation-State</h5>
+                                <p class="text-sm text-gray-600">Gunpowder and the printing press destroyed castles and the Church. Mass armies and mass media created the nation-state.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded text-sm font-bold flex-shrink-0">4</div>
+                            <div>
+                                <h5 class="font-bold">Industrial → Information Age</h5>
+                                <p class="text-sm text-gray-600">The microprocessor shifts power from states to individuals. Wealth becomes mobile and intangible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-indigo-50 p-6 rounded-r-xl mb-6 border-l-4 border-indigo-500">
+                    <h4 class="font-bold text-indigo-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The technology of the Information Age makes it possible to create wealth anywhere—and to protect it anywhere. This transforms the balance of power between the individual and the state."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Death of the Nation-State</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The nation-state rose because industrial technology (mass production, mass armies, mass media) required large-scale organization. But the information age inverts this logic. Digital goods don't require factories. Digital workers don't require offices. Digital money doesn't require borders.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🏛️</div>
+                        <h4 class="font-bold text-red-800 mb-2">Why States Are Doomed</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• <strong>Wealth becomes intangible:</strong> You can't tax ideas the way you can tax land or factories.</li>
+                            <li>• <strong>Mobility increases:</strong> Talented people can work from anywhere. Why stay in a high-tax jurisdiction?</li>
+                            <li>• <strong>Violence becomes less effective:</strong> You can't bomb a Bitcoin wallet.</li>
+                            <li>• <strong>Legitimacy fades:</strong> As states deliver less value, their claim to loyalty weakens.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🌐</div>
+                        <h4 class="font-bold text-green-800 mb-2">What Replaces States</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• <strong>City-states:</strong> Singapore, Dubai, Hong Kong—small, nimble jurisdictions that compete for talent.</li>
+                            <li>• <strong>Private governance:</strong> Gated communities, special economic zones, charter cities.</li>
+                            <li>• <strong>Virtual communities:</strong> Online groups with shared rules and economies.</li>
+                            <li>• <strong>Sovereign Individuals:</strong> The most successful will owe allegiance to no one.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-indigo-50 p-6 rounded-r-xl mb-6 border-l-4 border-indigo-500">
+                    <h4 class="font-bold text-indigo-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The nation-state is an artifact of the industrial age. It emerged with the factory and will fade with it. In the information age, governments will have to treat their citizens as customers—or lose them."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Cyberspace and Cybermoney</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This is where the book's predictions become breathtaking. Remember, this was written in 1997—before PayPal, before smartphones, and 12 years before Bitcoin. Yet the authors describe something unmistakably like cryptocurrency:
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-indigo-400 mb-4 text-xl">💰 Prophetic Quotes on "Cybermoney" (1997)</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <blockquote class="border-l-4 border-indigo-500 pl-4 italic">
+                            "When Sovereign Individuals can deal from jurisdictions that no longer answer to mass electorates, they will not have to remit taxes to pay for elaborate transfer programs."
+                        </blockquote>
+                        <blockquote class="border-l-4 border-indigo-500 pl-4 italic">
+                            "The new digital money will reset the odds, shortening the reach of government."
+                        </blockquote>
+                        <blockquote class="border-l-4 border-indigo-500 pl-4 italic">
+                            "Cybermoney will be denationalized... it will be as much beyond the reach of governments as the information on the Internet today."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The authors understood that money is information, and information wants to be free. Once you can transmit value across borders instantly and anonymously, the government's power to tax and control is fundamentally broken.
+                </p>
+
+                <div class="key-point bg-indigo-50 p-6 rounded-r-xl mb-6 border-l-4 border-indigo-500">
+                    <h4 class="font-bold text-indigo-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Bitcoin didn't come from nowhere. It was the inevitable consequence of the megapolitical forces described in this book. The technology made it possible; the incentives made it inevitable.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Cognitive Elite</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The information age rewards intelligence and creativity over physical labor or capital ownership. A talented programmer can create billions in value from a laptop. This creates a new class: the <strong>cognitive elite</strong>.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🧠 Characteristics of the Cognitive Elite</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-indigo-500">→</span>
+                            <span><strong>Location independent:</strong> They work from anywhere with internet.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-indigo-500">→</span>
+                            <span><strong>Highly mobile:</strong> They can (and do) move to low-tax, high-quality jurisdictions.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-indigo-500">→</span>
+                            <span><strong>Earn in multiples:</strong> The gap between average and top performers widens dramatically.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-indigo-500">→</span>
+                            <span><strong>Opt out:</strong> They have the leverage to negotiate with governments or simply leave.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This creates a problem for mass democracies. The people who generate the most value are increasingly able to escape taxation, while those who depend on redistribution cannot. The authors predict rising resentment and political instability as a result.
+                </p>
+
+                <div class="key-point bg-indigo-50 p-6 rounded-r-xl mb-6 border-l-4 border-indigo-500">
+                    <h4 class="font-bold text-indigo-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"As the returns to talent rise, the nation-state's ability to redistribute income will fall. This will create political pressure from those left behind—expect populist backlash and attempts to restrict exit."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Retreat of Welfare</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The authors argue that the welfare state was a product of the industrial age. Mass production required mass labor, and mass labor required social peace. Welfare was a bribe to prevent revolution. But in the information age, the calculus changes.
+                </p>
+
+                <div class="bg-red-50 border border-red-200 p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-red-800 mb-4">⚠️ Why Welfare Will Decline</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">1.</span>
+                            <span><strong>Tax base erodes:</strong> As the wealthy become mobile, they exit high-tax jurisdictions. Less revenue to redistribute.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">2.</span>
+                            <span><strong>Automation:</strong> Many workers become economically redundant. Productivity gains accrue to capital/talent, not labor.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">3.</span>
+                            <span><strong>Debt unsustainable:</strong> Western governments have made promises they cannot keep. Default is inevitable.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">4.</span>
+                            <span><strong>Legitimacy crisis:</strong> As states fail to deliver, citizens lose faith in the social contract.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The authors predict this will lead to social unrest, populist movements, and eventually a restructuring of society around private rather than public provision of services.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Becoming a Sovereign Individual</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The book ends with practical advice. How do you position yourself to thrive in the coming transition? How do you become a Sovereign Individual?
+                </p>
+
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl mb-6 border border-indigo-200">
+                    <h4 class="font-bold text-gray-800 mb-4 text-xl">🚀 Strategies for Sovereignty</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="text-indigo-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Develop High-Value Skills</h5>
+                                <p class="text-gray-600">Focus on skills that are scarce, valuable, and can be delivered remotely. Programming, writing, design, consulting.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-indigo-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Diversify Geographically</h5>
+                                <p class="text-gray-600">"Plant flags" in multiple jurisdictions. Residency, banking, citizenship—don't have all eggs in one basket.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-indigo-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Hold Cybermoney</h5>
+                                <p class="text-gray-600">Own assets that are beyond the reach of any single government. (Today: Bitcoin)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-indigo-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Reduce Dependence on the State</h5>
+                                <p class="text-gray-600">Don't rely on government pensions, healthcare, or security. Build private alternatives.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-indigo-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Think Like a Customer</h5>
+                                <p class="text-gray-600">Governments are service providers. If they don't provide value, find better providers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-indigo-50 p-6 rounded-r-xl mb-6 border-l-4 border-indigo-500">
+                    <h4 class="font-bold text-indigo-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The new Sovereign Individual will operate like the medieval knight—but with better armor. That armor is cryptography, that steed is the internet, and that castle is any jurisdiction that offers liberty."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 card-hover">
+                    <div class="text-3xl mb-3">⚙️</div>
+                    <h3 class="font-bold text-lg mb-2">Technology Drives History</h3>
+                    <p class="text-gray-600">The stirrup made feudalism; gunpowder made nation-states; the microprocessor will unmake them.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 card-hover">
+                    <div class="text-3xl mb-3">🏛️</div>
+                    <h3 class="font-bold text-lg mb-2">Nation-States Are Dying</h3>
+                    <p class="text-gray-600">Industrial-age governments can't survive when wealth is mobile and intangible.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 card-hover">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h3 class="font-bold text-lg mb-2">Cybermoney Is Coming</h3>
+                    <p class="text-gray-600">The authors predicted Bitcoin's core properties 12 years before Satoshi's whitepaper.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 card-hover">
+                    <div class="text-3xl mb-3">🧠</div>
+                    <h3 class="font-bold text-lg mb-2">The Cognitive Elite Will Win</h3>
+                    <p class="text-gray-600">Those who can add value with their minds—and are mobile—will thrive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "The Sovereign Individual" is not an easy or comfortable read. It predicts the decline of democracy, the end of the welfare state, and growing inequality. But its track record of correct predictions is stunning. Reading it in 2024, you realize the authors saw the future more clearly than almost anyone. If you want to understand where we're heading—and how to position yourself—this book is indispensable.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Prophetic Masterpiece</div>
+                        <div class="text-gray-400">The most important book for understanding the 21st century.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

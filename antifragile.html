@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antifragile Summary - Book Insights</title>
+    <meta name="description" content="Comprehensive summary of Antifragile by Nassim Taleb. Learn how some things gain from disorder, chaos, and stress.">
+    <meta name="keywords" content="Antifragile, Nassim Taleb, summary, black swan, risk, volatility, robustness">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #18181b, #71717a);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">28 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-zinc-900 via-gray-800 to-stone-900 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-zinc-700 text-zinc-100 rounded-full text-sm font-medium mb-4">Philosophy & Risk</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">Antifragile</h1>
+                    <p class="text-xl text-gray-300 mb-4">Things That Gain from Disorder</p>
+                    <p class="text-gray-400 mb-6">By <span class="font-semibold text-white">Nassim Nicholas Taleb</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">💪 Resilience</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🦢 Black Swans</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">📈 Volatility</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-zinc-700 to-gray-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-zinc-600">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">🔥</div>
+                            <div class="font-serif font-bold leading-tight text-sm">Antifragile</div>
+                            <div class="text-xs text-gray-500 mt-2">Nassim Taleb</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    "Antifragile" introduces a concept that didn't have a name until Taleb coined it: things that <strong>gain from disorder</strong>. The opposite of fragile isn't robust (which merely resists shock)—it's antifragile (which gets stronger from shock). Taleb argues that we should embrace volatility, randomness, and stress because they're essential for growth. He applies this concept to health, economics, politics, and life itself.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Triad -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-zinc-50 to-gray-100 p-6 rounded-2xl border border-zinc-200">
+                <h3 class="font-bold text-zinc-900 mb-4 text-xl">🔺 The Central Framework: The Triad</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-red-50 border border-red-200 p-4 rounded-xl text-center">
+                        <div class="text-3xl mb-2">🥚</div>
+                        <h4 class="font-bold text-red-800">Fragile</h4>
+                        <p class="text-sm text-gray-600 mt-2">Harmed by volatility. Wants tranquility. Breaks under stress.</p>
+                        <p class="text-xs text-red-600 mt-2 italic">Example: A glass, a bureaucracy, over-optimized systems</p>
+                    </div>
+                    <div class="bg-gray-100 border border-gray-300 p-4 rounded-xl text-center">
+                        <div class="text-3xl mb-2">🪨</div>
+                        <h4 class="font-bold text-gray-800">Robust</h4>
+                        <p class="text-sm text-gray-600 mt-2">Unaffected by volatility. Resists shock. Stays the same.</p>
+                        <p class="text-xs text-gray-600 mt-2 italic">Example: A rock, a stoic person</p>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-4 rounded-xl text-center">
+                        <div class="text-3xl mb-2">💪</div>
+                        <h4 class="font-bold text-green-800">Antifragile</h4>
+                        <p class="text-sm text-gray-600 mt-2">Gains from volatility. Loves stress. Grows stronger.</p>
+                        <p class="text-xs text-green-600 mt-2 italic">Example: Muscles, evolution, Hydra</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> Key Concepts Explored
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#concept1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">The Triad: Fragile → Robust → Antifragile</h3>
+                </a>
+                <a href="#concept2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">Via Negativa: What to Remove</h3>
+                </a>
+                <a href="#concept3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Barbell Strategy</h3>
+                </a>
+                <a href="#concept4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">Skin in the Game</h3>
+                </a>
+                <a href="#concept5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">The Lindy Effect</h3>
+                </a>
+                <a href="#concept6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-zinc-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">Optionality & Tinkering</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Concept 1 -->
+        <article id="concept1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Triad: Understanding Fragility</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Before Taleb, we only had two categories: fragile and robust. But robustness isn't the opposite of fragility—it's just the middle. The true opposite of fragile is <strong>antifragile</strong>: something that benefits from shocks.
+                </p>
+                
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🧬 Examples of Antifragility</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-bold flex-shrink-0">Muscles</span>
+                            <span>Stress from exercise causes micro-tears, which heal stronger. Without stress, muscles atrophy.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-bold flex-shrink-0">Immune System</span>
+                            <span>Exposure to germs builds immunity. Over-sanitization creates weakness.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-bold flex-shrink-0">Evolution</span>
+                            <span>Species adapt through random mutations and selection pressure. Stress drives innovation.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-bold flex-shrink-0">Startups</span>
+                            <span>Competition and failure create stronger businesses. Bailouts create zombies.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Wind extinguishes a candle and energizes fire. You want to be the fire—you want to benefit from randomness, volatility, and disorder."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Concept 2 -->
+        <article id="concept2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Via Negativa: The Power of Subtraction</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    We think improvement means <em>adding</em> things. But often, the best way to improve is by <em>removing</em>—subtracting the negative rather than adding the positive. Taleb calls this "Via Negativa."
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">➕</div>
+                        <h4 class="font-bold text-red-800 mb-2">Via Positiva (Adding)</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>❌ Take this pill to get healthier</li>
+                            <li>❌ Add more features to the product</li>
+                            <li>❌ Do more activities</li>
+                            <li>❌ Add more laws and regulations</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">➖</div>
+                        <h4 class="font-bold text-green-800 mb-2">Via Negativa (Removing)</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>✅ Stop eating junk food</li>
+                            <li>✅ Remove unnecessary complexity</li>
+                            <li>✅ Eliminate time-wasting activities</li>
+                            <li>✅ Remove harmful regulations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The first step toward antifragility consists in first decreasing downside." Remove fragilities before adding improvements.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Concept 3 -->
+        <article id="concept3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Barbell Strategy</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The barbell strategy means being extremely conservative on one side and extremely aggressive on the other—avoiding the "middle" which seems safe but is actually the most dangerous.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-zinc-300 mb-4 text-xl">🏋️ The Barbell in Practice</h4>
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="bg-blue-900/50 p-4 rounded-lg text-center flex-1">
+                            <div class="text-3xl mb-2">🛡️</div>
+                            <h5 class="font-bold text-blue-300">90% Ultra-Safe</h5>
+                            <p class="text-sm text-gray-400 mt-2">Cash, treasury bonds, things that can't blow up</p>
+                        </div>
+                        <div class="text-4xl text-gray-600">—</div>
+                        <div class="bg-red-900/30 p-4 rounded-lg text-center opacity-50">
+                            <div class="text-3xl mb-2">⚠️</div>
+                            <h5 class="font-bold text-gray-400">AVOID Middle</h5>
+                            <p class="text-sm text-gray-500 mt-2">"Medium risk" investments</p>
+                        </div>
+                        <div class="text-4xl text-gray-600">—</div>
+                        <div class="bg-orange-900/50 p-4 rounded-lg text-center flex-1">
+                            <div class="text-3xl mb-2">🚀</div>
+                            <h5 class="font-bold text-orange-300">10% High-Risk</h5>
+                            <p class="text-sm text-gray-400 mt-2">Speculative bets with huge upside</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-xl mb-6 border border-amber-200">
+                    <h4 class="font-bold text-amber-800 mb-3">💡 Why Avoid the Middle?</h4>
+                    <p class="text-gray-700">"Medium risk" often means you have significant downside <em>without</em> significant upside. You get the worst of both worlds. The barbell gives you defined, limited downside (you know exactly how much you can lose) with unlimited upside (you can capture black swan gains).</p>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"If you have optionality, you don't need intelligence." The barbell protects against ruin while exposing you to unlimited upside.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Concept 4 -->
+        <article id="concept4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Skin in the Game</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Those who make decisions should bear the consequences. When decision-makers don't have "skin in the game," they transfer risk to others—creating fragility in the system.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🎭 Who Has Skin in the Game?</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+                            <span class="text-2xl">✅</span>
+                            <div>
+                                <span class="font-bold text-green-800">Entrepreneurs</span>
+                                <p class="text-sm text-gray-600">They risk their own money. They fail, they suffer.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+                            <span class="text-2xl">✅</span>
+                            <div>
+                                <span class="font-bold text-green-800">Artisans</span>
+                                <p class="text-sm text-gray-600">Their reputation is on the line with every product.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-red-50 rounded-lg">
+                            <span class="text-2xl">❌</span>
+                            <div>
+                                <span class="font-bold text-red-800">Bankers (Pre-2008)</span>
+                                <p class="text-sm text-gray-600">They got bonuses for risky bets. When bets failed, taxpayers paid.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-red-50 rounded-lg">
+                            <span class="text-2xl">❌</span>
+                            <div>
+                                <span class="font-bold text-red-800">Politicians</span>
+                                <p class="text-sm text-gray-600">They make decisions; citizens bear the consequences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Never trust anyone who doesn't have skin in the game." The absence of skin in the game creates systemic fragility and moral hazard.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Concept 5 -->
+        <article id="concept5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Lindy Effect</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    For non-perishable things (ideas, technologies, books), the longer something has survived, the longer it is likely to survive. Age is a sign of robustness.
+                </p>
+
+                <div class="bg-gradient-to-r from-zinc-50 to-gray-100 p-6 rounded-xl mb-6 border border-zinc-200">
+                    <h4 class="font-bold text-zinc-900 mb-4">⏳ Lindy in Action</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm">📚 Books</h5>
+                            <p class="text-xs text-gray-600 mt-1">A book that's been in print 100 years will likely be in print 100 more. A bestseller from last year might be forgotten.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm">🍳 Technologies</h5>
+                            <p class="text-xs text-gray-600 mt-1">The wheel, the chair, the spoon—thousands of years old, not going anywhere. Last year's hot app? Probably gone.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm">🏛️ Religions</h5>
+                            <p class="text-xs text-gray-600 mt-1">Major religions are thousands of years old. New cults come and go.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm">₿ Bitcoin</h5>
+                            <p class="text-xs text-gray-600 mt-1">Every year it survives, its expected lifespan increases. Lindy loves survivors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The old is expected to have a longer life expectancy than the young." Trust time-tested things over new and "improved" alternatives.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Concept 6 -->
+        <article id="concept6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-full text-sm font-bold">Concept 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Optionality & Tinkering</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The greatest innovations don't come from grand theories—they come from trial and error, from tinkering. Having options (optionality) means you can exploit randomness rather than be harmed by it.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🔧 Tinkering > Theorizing</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="text-2xl">🛠️</span>
+                            <div>
+                                <h5 class="font-bold">The Jet Engine</h5>
+                                <p class="text-sm text-gray-600">Invented by tinkerers, not by those who understood aerodynamics theory.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-2xl">💊</span>
+                            <div>
+                                <h5 class="font-bold">Most Medicines</h5>
+                                <p class="text-sm text-gray-600">Discovered by accident (penicillin), not by theoretical biology.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-2xl">🏛️</span>
+                            <div>
+                                <h5 class="font-bold">Architecture</h5>
+                                <p class="text-sm text-gray-600">Ancient buildings that still stand were built by craftsmen, not engineers with equations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-zinc-100 p-6 rounded-r-xl mb-6 border-l-4 border-zinc-500">
+                    <h4 class="font-bold text-zinc-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The option is more valuable than the theory." Prefer action and iteration over planning and predicting. Have lots of options.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-zinc-500 card-hover">
+                    <div class="text-3xl mb-3">💪</div>
+                    <h3 class="font-bold text-lg mb-2">Seek Antifragility</h3>
+                    <p class="text-gray-600">Don't just survive shocks—benefit from them. Expose yourself to small stressors.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-zinc-500 card-hover">
+                    <div class="text-3xl mb-3">➖</div>
+                    <h3 class="font-bold text-lg mb-2">Via Negativa</h3>
+                    <p class="text-gray-600">Improvement often comes from removing negatives, not adding positives.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-zinc-500 card-hover">
+                    <div class="text-3xl mb-3">🏋️</div>
+                    <h3 class="font-bold text-lg mb-2">Use the Barbell</h3>
+                    <p class="text-gray-600">Combine extreme safety with extreme risk. Avoid the dangerous middle.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-zinc-500 card-hover">
+                    <div class="text-3xl mb-3">⏳</div>
+                    <h3 class="font-bold text-lg mb-2">Trust Lindy</h3>
+                    <p class="text-gray-600">Old, time-tested things are more robust than new, unproven things.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "Antifragile" is Taleb's magnum opus—a unified framework for understanding why some things thrive under stress while others collapse. It's not an easy read, but the ideas are transformative. Once you see the world through the lens of fragile/robust/antifragile, you can't unsee it. It applies to health, investing, business, relationships, and life itself.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Transformative</div>
+                        <div class="text-gray-400">One of the most important books of the 21st century.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

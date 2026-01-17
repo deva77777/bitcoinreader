@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - Inventing Bitcoin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #0284c7, #38bdf8);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">22 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-sky-600 via-blue-600 to-cyan-700 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-sky-800/50 text-sky-100 rounded-full text-sm font-medium mb-4">Technical Explanation</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">Inventing Bitcoin</h1>
+                    <p class="text-xl text-sky-100 mb-4">The Technology Behind the First Truly Scarce and Decentralized Money Explained</p>
+                    <p class="text-sky-200 mb-6">By <span class="font-semibold text-white">Yan Pritzker</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">⚙️ Technical</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🔐 Cryptography</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">📚 Beginner-Friendly</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-sky-700 to-blue-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-sky-400">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">⚙️</div>
+                            <div class="font-serif font-bold leading-tight text-sm">Inventing Bitcoin</div>
+                            <div class="text-xs text-gray-500 mt-2">Yan Pritzker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    "Inventing Bitcoin" is the most accessible technical explanation of how Bitcoin works. Yan Pritzker walks you through the problems Bitcoin solves and the ingenious solutions Satoshi Nakamoto designed—without requiring any programming or math background. By the end, you'll understand hashing, digital signatures, proof of work, the blockchain, and why Bitcoin is so revolutionary.
+                </p>
+            </div>
+        </section>
+
+        <!-- Book Approach -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-sky-50 to-blue-50 p-6 rounded-2xl border border-sky-200">
+                <h3 class="font-bold text-sky-900 mb-4 text-xl">🎯 The Book's Approach</h3>
+                <p class="text-gray-700 mb-4">Instead of starting with "what Bitcoin is," Pritzker starts with "what problems does money need to solve?" He then walks through how you might invent a digital money from scratch, arriving at Bitcoin's design naturally.</p>
+                <div class="bg-white p-4 rounded-xl">
+                    <p class="text-sm italic text-gray-600">"Imagine you're trying to create digital money. What problems would you need to solve? Let's solve them together, step by step."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> Key Concepts Explained
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">The Problem of Digital Money</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">Digital Signatures & Ownership</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Double-Spend Problem</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">Proof of Work & Mining</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">The Blockchain</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-sky-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">Nodes & Consensus</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Problem of Digital Money</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Digital information can be copied infinitely. If money is just information, how do you prevent someone from copying their money and spending it twice? This is the <strong>fundamental problem</strong> that stumped computer scientists for decades.
+                </p>
+                
+                <div class="bg-sky-50 p-6 rounded-xl mb-6 border border-sky-100">
+                    <h4 class="font-bold text-sky-900 mb-4">🤔 Why Is Digital Money Hard?</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">✗</span>
+                            <span><strong>Copy Problem:</strong> Digital files can be duplicated. What stops you from copying your "money file"?</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">✗</span>
+                            <span><strong>Trust Problem:</strong> Without a central authority, who keeps the records? Who decides balances?</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">✗</span>
+                            <span><strong>Ordering Problem:</strong> If Alice sends $10 to Bob and Carol, which transaction came first?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Before Bitcoin, all digital payment systems (PayPal, Venmo, banks) solved these problems with a <strong>central authority</strong>. Bitcoin was the first to solve them without any trusted third party.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Digital Signatures: Proving Ownership</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    How do you prove that YOU authorized a transaction, not an imposter? Physical signatures can be forged. Passwords can be stolen. Bitcoin uses <strong>digital signatures</strong>—a cryptographic tool that is mathematically unforgeable.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-sky-400 mb-4 text-xl">🔐 How Digital Signatures Work</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-sky-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Generate Key Pair</h5>
+                                <p class="text-gray-300">You create a <strong>private key</strong> (secret, like a password) and a <strong>public key</strong> (shareable, like an email address).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-sky-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">Sign with Private Key</h5>
+                                <p class="text-gray-300">When you send Bitcoin, you "sign" the transaction with your private key. This creates a unique signature.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-sky-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Verify with Public Key</h5>
+                                <p class="text-gray-300">Anyone can use your public key to verify the signature is valid—but they can't create one without your private key.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Not your keys, not your coins." If you don't control your private key, you don't truly own your Bitcoin. The private key IS ownership.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Double-Spend Problem</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This is the core problem. Alice has 1 BTC. She sends it to Bob. Then she sends the <em>same</em> 1 BTC to Carol. Which transaction is valid? Without a central authority, how does the network decide?
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🏦</div>
+                        <h4 class="font-bold text-red-800 mb-2">Traditional Solution</h4>
+                        <p class="text-sm text-gray-700">A central authority (bank) keeps a ledger and rejects duplicate spends. But this requires trusting the bank.</p>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">₿</div>
+                        <h4 class="font-bold text-green-800 mb-2">Bitcoin's Solution</h4>
+                        <p class="text-sm text-gray-700">A <strong>distributed ledger</strong> that everyone can see and verify. The network agrees on one version of truth.</p>
+                    </div>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The double-spend problem is really a <strong>consensus problem</strong>: how do thousands of computers agree on the same transaction history without a leader?</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Proof of Work & Mining</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    How do you prevent bad actors from flooding the network with fake transactions? Make it <strong>expensive</strong> to participate. This is the genius of Proof of Work.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">⛏️ What Mining Actually Does</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-500 font-bold">1.</span>
+                            <span><strong>Collect transactions:</strong> Miners gather pending transactions into a "block."</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-500 font-bold">2.</span>
+                            <span><strong>Find a special number:</strong> They try billions of random numbers looking for one that, when combined with the block data and hashed, produces a result starting with many zeros.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-500 font-bold">3.</span>
+                            <span><strong>Prove the work:</strong> Finding this number proves you did enormous computational work. It's easy for others to verify, hard to produce.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-500 font-bold">4.</span>
+                            <span><strong>Win the reward:</strong> The first miner to find a valid number gets to add the block and receives newly created Bitcoin.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-xl mb-6 border border-amber-200">
+                    <h4 class="font-bold text-amber-900 mb-2">💡 The Lottery Analogy</h4>
+                    <p class="text-gray-700">Mining is like a lottery where you buy tickets by doing computation. The more computing power you have, the more tickets you can buy. But each ticket is still random—you might win with your first try or your billionth.</p>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Proof of Work isn't "wasting energy"—it's <strong>converting energy into security</strong>. The more energy spent mining, the more expensive it is to attack the network.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Blockchain: Chaining Blocks Together</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Each block contains a cryptographic "fingerprint" (hash) of the previous block. This chains them together. Change any historical block, and every block after it becomes invalid.
+                </p>
+
+                <div class="bg-gradient-to-r from-sky-100 to-blue-100 p-6 rounded-xl mb-6 border border-sky-200">
+                    <h4 class="font-bold text-sky-900 mb-4">🔗 Visualizing the Chain</h4>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+                        <div class="bg-white p-3 rounded-lg shadow text-center">
+                            <div class="font-bold">Block 1</div>
+                            <div class="text-xs text-gray-500">Hash: abc123</div>
+                        </div>
+                        <div class="text-2xl">→</div>
+                        <div class="bg-white p-3 rounded-lg shadow text-center">
+                            <div class="font-bold">Block 2</div>
+                            <div class="text-xs text-gray-500">Prev: abc123</div>
+                            <div class="text-xs text-gray-500">Hash: def456</div>
+                        </div>
+                        <div class="text-2xl">→</div>
+                        <div class="bg-white p-3 rounded-lg shadow text-center">
+                            <div class="font-bold">Block 3</div>
+                            <div class="text-xs text-gray-500">Prev: def456</div>
+                            <div class="text-xs text-gray-500">Hash: ghi789</div>
+                        </div>
+                        <div class="text-2xl">→</div>
+                        <div class="text-gray-400">...</div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4 text-center">Each block references the previous block's hash, creating an unbreakable chain.</p>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The blockchain is <strong>append-only</strong>. You can add new blocks, but changing old ones is practically impossible—you'd have to redo all the proof of work for every subsequent block.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-bold">Concept 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Nodes & Consensus: The Network</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Bitcoin isn't run by one computer—it's run by thousands of <strong>nodes</strong> around the world. Each node has a complete copy of the blockchain and independently verifies every transaction.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">💻</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Full Nodes</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Store the entire blockchain</li>
+                            <li>• Verify all rules are followed</li>
+                            <li>• Reject invalid blocks/transactions</li>
+                            <li>• Anyone can run one</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">⛏️</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Mining Nodes</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Do everything full nodes do</li>
+                            <li>• Also compete to create new blocks</li>
+                            <li>• Require specialized hardware</li>
+                            <li>• Earn block rewards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-xl mb-6 border border-green-200">
+                    <h4 class="font-bold text-green-800 mb-3">🗳️ How Consensus Works</h4>
+                    <p class="text-gray-700 mb-3">When there's a conflict (e.g., two miners find blocks at the same time), the network follows the <strong>longest chain</strong>—the one with the most accumulated proof of work.</p>
+                    <p class="text-gray-700">This simple rule allows thousands of independent computers to agree on one version of history without any central coordinator.</p>
+                </div>
+
+                <div class="key-point bg-sky-50 p-6 rounded-r-xl mb-6 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Don't trust, verify." Running your own node means you don't have to trust anyone. You independently verify that all the rules are being followed.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sky-500 card-hover">
+                    <div class="text-3xl mb-3">🔐</div>
+                    <h3 class="font-bold text-lg mb-2">Private Keys = Ownership</h3>
+                    <p class="text-gray-600">Digital signatures prove ownership without revealing your private key.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sky-500 card-hover">
+                    <div class="text-3xl mb-3">⛏️</div>
+                    <h3 class="font-bold text-lg mb-2">PoW = Security</h3>
+                    <p class="text-gray-600">Proof of Work converts energy into security, making attacks prohibitively expensive.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sky-500 card-hover">
+                    <div class="text-3xl mb-3">🔗</div>
+                    <h3 class="font-bold text-lg mb-2">Blockchain = Immutability</h3>
+                    <p class="text-gray-600">Chaining blocks together makes history practically unchangeable.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sky-500 card-hover">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <h3 class="font-bold text-lg mb-2">Nodes = Decentralization</h3>
+                    <p class="text-gray-600">Thousands of independent verifiers ensure no one can cheat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "Inventing Bitcoin" succeeds where many technical books fail: it explains complex concepts without dumbing them down. Pritzker assumes intelligence but not prior knowledge. By the end, you understand not just <em>what</em> Bitcoin does, but <em>why</em> it's designed the way it is. Essential reading for anyone who wants to go beyond "number go up."
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Best Technical Introduction</div>
+                        <div class="text-gray-400">The clearest explanation of how Bitcoin works.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

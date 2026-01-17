@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - 21 Lessons</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">25 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-violet-900 via-purple-800 to-fuchsia-900 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-violet-800/50 text-violet-100 rounded-full text-sm font-medium mb-4">Philosophy & Bitcoin</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">21 Lessons</h1>
+                    <p class="text-xl text-violet-200 mb-4">What I've Learned from Falling Down the Bitcoin Rabbit Hole</p>
+                    <p class="text-violet-300 mb-6">By <span class="font-semibold text-white">Gigi</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🐰 Rabbit Hole</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🧘 Philosophy</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">₿ 21 Million</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-violet-700 to-purple-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-violet-500">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">🐇</div>
+                            <div class="font-serif font-bold leading-tight text-sm">21 Lessons</div>
+                            <div class="text-xs text-gray-500 mt-2">Gigi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    "21 Lessons" is a philosophical journey through what Bitcoin teaches us about money, economics, technology, and life itself. Gigi organizes his reflections into three chapters—Philosophy, Economics, and Technology—with 7 lessons each (21 total, matching Bitcoin's 21 million supply cap). It's less about convincing you to buy Bitcoin and more about the profound ideas you encounter when you truly try to understand it.
+                </p>
+            </div>
+        </section>
+
+        <!-- Structure Overview -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-violet-50 to-purple-50 p-6 rounded-2xl border border-violet-200">
+                <h3 class="font-bold text-violet-900 mb-4 text-xl">📖 The Structure: 21 Lessons in 3 Chapters</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm text-center">
+                        <div class="text-3xl mb-2">🧠</div>
+                        <h4 class="font-bold">Chapter I</h4>
+                        <p class="text-sm text-gray-600">Philosophy</p>
+                        <p class="text-xs text-violet-600 mt-1">Lessons 1-7</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm text-center">
+                        <div class="text-3xl mb-2">💰</div>
+                        <h4 class="font-bold">Chapter II</h4>
+                        <p class="text-sm text-gray-600">Economics</p>
+                        <p class="text-xs text-violet-600 mt-1">Lessons 8-14</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm text-center">
+                        <div class="text-3xl mb-2">⚙️</div>
+                        <h4 class="font-bold">Chapter III</h4>
+                        <p class="text-sm text-gray-600">Technology</p>
+                        <p class="text-xs text-violet-600 mt-1">Lessons 15-21</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter I: Philosophy -->
+        <article id="philosophy" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter I</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Philosophy: What Bitcoin Teaches About Reality</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <div class="space-y-6">
+                    <!-- Lesson 1 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                            <h3 class="font-bold text-lg">Immutability and Change</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin is unchanging in its rules, yet constantly evolving in its adoption. It teaches us the difference between core principles (which must be immutable) and surface features (which can adapt).</p>
+                    </div>
+
+                    <!-- Lesson 2 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                            <h3 class="font-bold text-lg">The Scarcity of Scarcity</h3>
+                        </div>
+                        <p class="text-gray-700">True scarcity is incredibly rare in the digital world. Everything can be copied infinitely—except Bitcoin. It's the first truly scarce digital object, which is philosophically profound.</p>
+                    </div>
+
+                    <!-- Lesson 3 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                            <h3 class="font-bold text-lg">Replication and Locality</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin exists everywhere and nowhere. The ledger is replicated across thousands of nodes worldwide. There is no "original"—the network IS Bitcoin.</p>
+                    </div>
+
+                    <!-- Lesson 4 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                            <h3 class="font-bold text-lg">The Problem of Identity</h3>
+                        </div>
+                        <p class="text-gray-700">What makes Bitcoin "Bitcoin"? It's not the code (which can be copied). It's not the miners (who change). It's the consensus—the shared agreement of what the rules are.</p>
+                    </div>
+
+                    <!-- Lesson 5 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">5</span>
+                            <h3 class="font-bold text-lg">An Immaculate Conception</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin's founder disappeared. No company, no foundation, no leader controls it. This "immaculate conception" can never be replicated and is essential to its nature.</p>
+                    </div>
+
+                    <!-- Lesson 6 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">6</span>
+                            <h3 class="font-bold text-lg">The Power of Free Speech</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin is protected by free speech. It's just numbers and words—code. Banning Bitcoin would require banning math and speech. This makes it incredibly resilient.</p>
+                    </div>
+
+                    <!-- Lesson 7 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-violet-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">7</span>
+                            <h3 class="font-bold text-lg">The Limits of Knowledge</h3>
+                        </div>
+                        <p class="text-gray-700">No one fully understands Bitcoin. It spans cryptography, economics, game theory, computer science, and history. It teaches humility about the limits of individual knowledge.</p>
+                    </div>
+                </div>
+
+                <div class="key-point bg-violet-50 p-6 rounded-r-xl my-6 border-l-4 border-violet-500">
+                    <h4 class="font-bold text-violet-800 mb-2">🔑 Chapter I Summary</h4>
+                    <p class="text-gray-700">Bitcoin forces us to ask deep questions about identity, scarcity, change, and knowledge. It's a mirror that reflects our assumptions back at us.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter II: Economics -->
+        <article id="economics" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter II</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Economics: What Bitcoin Teaches About Money</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <div class="space-y-6">
+                    <!-- Lesson 8 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">8</span>
+                            <h3 class="font-bold text-lg">Financial Ignorance</h3>
+                        </div>
+                        <p class="text-gray-700">Most people don't understand how money works. Bitcoin forces you to learn—and what you learn is shocking. Money creation, fractional reserve banking, inflation... it's all hidden in plain sight.</p>
+                    </div>
+
+                    <!-- Lesson 9 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">9</span>
+                            <h3 class="font-bold text-lg">Inflation</h3>
+                        </div>
+                        <p class="text-gray-700">Inflation is not "prices going up." It's the money supply expanding, diluting your savings. Bitcoin's fixed supply makes this impossible—it's deflationary by design.</p>
+                    </div>
+
+                    <!-- Lesson 10 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">10</span>
+                            <h3 class="font-bold text-lg">Value</h3>
+                        </div>
+                        <p class="text-gray-700">Value is subjective. Bitcoin has value because people believe it does and are willing to trade for it. This is true of all money—including the dollar.</p>
+                    </div>
+
+                    <!-- Lesson 11 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">11</span>
+                            <h3 class="font-bold text-lg">Money</h3>
+                        </div>
+                        <p class="text-gray-700">"What is money?" is a deceptively hard question. Bitcoin forces you to grapple with it. Money is not wealth—it's a tool for measuring and transferring value across time and space.</p>
+                    </div>
+
+                    <!-- Lesson 12 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">12</span>
+                            <h3 class="font-bold text-lg">The History of Money</h3>
+                        </div>
+                        <p class="text-gray-700">Money has evolved: shells, beads, metals, paper, digits. Each transition seemed impossible until it happened. Bitcoin is the next evolution—digital, scarce, borderless.</p>
+                    </div>
+
+                    <!-- Lesson 13 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">13</span>
+                            <h3 class="font-bold text-lg">Fractional Reserve Insanity</h3>
+                        </div>
+                        <p class="text-gray-700">Banks lend out money they don't have. Your "savings" don't exist—they've been lent to someone else. Bitcoin is fully reserved by design. What you have is actually yours.</p>
+                    </div>
+
+                    <!-- Lesson 14 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-amber-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">14</span>
+                            <h3 class="font-bold text-lg">Sound Money</h3>
+                        </div>
+                        <p class="text-gray-700">Sound money can't be easily created or destroyed. Gold was sound (hard to mine). Fiat is unsound (printed at will). Bitcoin is the soundest money ever invented—mathematically capped.</p>
+                    </div>
+                </div>
+
+                <div class="key-point bg-amber-50 p-6 rounded-r-xl my-6 border-l-4 border-amber-500">
+                    <h4 class="font-bold text-amber-800 mb-2">🔑 Chapter II Summary</h4>
+                    <p class="text-gray-700">Bitcoin is a crash course in monetary history and economics. You can't understand Bitcoin without understanding money—and once you understand money, you can't unsee what's broken.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter III: Technology -->
+        <article id="technology" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter III</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Technology: What Bitcoin Teaches About Systems</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <div class="space-y-6">
+                    <!-- Lesson 15 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">15</span>
+                            <h3 class="font-bold text-lg">Strength in Numbers</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin's security comes from numbers so large they're incomprehensible. A 256-bit private key has more combinations than atoms in the universe. Math protects your wealth.</p>
+                    </div>
+
+                    <!-- Lesson 16 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">16</span>
+                            <h3 class="font-bold text-lg">Reflections on "Don't Trust, Verify"</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin is trustless—you don't have to trust anyone. Run your own node, verify the rules yourself. This is revolutionary: a financial system that requires no faith in institutions.</p>
+                    </div>
+
+                    <!-- Lesson 17 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">17</span>
+                            <h3 class="font-bold text-lg">Telling Time Takes Work</h3>
+                        </div>
+                        <p class="text-gray-700">In a decentralized system, how do you agree on "now"? Bitcoin uses Proof of Work to create a clock—a shared sense of time without a central authority. It's a brilliant solution.</p>
+                    </div>
+
+                    <!-- Lesson 18 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">18</span>
+                            <h3 class="font-bold text-lg">Move Slowly and Don't Break Things</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin deliberately changes slowly. Unlike "Move fast and break things," Bitcoin prioritizes security and stability over features. When you're handling billions, caution is wisdom.</p>
+                    </div>
+
+                    <!-- Lesson 19 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">19</span>
+                            <h3 class="font-bold text-lg">Privacy Is Not Dead</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin is pseudonymous, not anonymous. But privacy technologies are improving. In a world of surveillance, the ability to transact privately is essential to freedom.</p>
+                    </div>
+
+                    <!-- Lesson 20 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">20</span>
+                            <h3 class="font-bold text-lg">Cypherpunks Write Code</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin didn't emerge from academia or government. It came from cypherpunks—activists who believed privacy and freedom require cryptographic tools. They didn't ask permission; they built.</p>
+                    </div>
+
+                    <!-- Lesson 21 -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">21</span>
+                            <h3 class="font-bold text-lg">Metaphors for Bitcoin's Future</h3>
+                        </div>
+                        <p class="text-gray-700">Bitcoin is a living organism, a virus, a mycelium network. It grows, adapts, spreads. It cannot be killed because it exists in the minds of those who run it. It is an idea whose time has come.</p>
+                    </div>
+                </div>
+
+                <div class="key-point bg-cyan-50 p-6 rounded-r-xl my-6 border-l-4 border-cyan-500">
+                    <h4 class="font-bold text-cyan-800 mb-2">🔑 Chapter III Summary</h4>
+                    <p class="text-gray-700">Bitcoin is a technological marvel that solves problems computer scientists thought were unsolvable. It's also a social technology—a way for humans to coordinate without trusting each other.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🐇</div>
+                    <h3 class="font-bold text-lg mb-2">The Rabbit Hole Is Deep</h3>
+                    <p class="text-gray-600">Bitcoin leads you to question everything: money, value, trust, time, identity, freedom.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🔢</div>
+                    <h3 class="font-bold text-lg mb-2">21 Is Sacred</h3>
+                    <p class="text-gray-600">21 million coins. 21 lessons. The scarcity is not just technical—it's philosophical.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🧘</div>
+                    <h3 class="font-bold text-lg mb-2">Bitcoin Is a Mirror</h3>
+                    <p class="text-gray-600">What you see in Bitcoin says as much about you as it does about Bitcoin.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🌱</div>
+                    <h3 class="font-bold text-lg mb-2">Bitcoin Is Alive</h3>
+                    <p class="text-gray-600">It grows, adapts, and evolves. It exists in minds. It cannot be killed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "21 Lessons" is not a technical manual or an investment guide. It's a philosophical journey written by someone who went deep and came back changed. Gigi doesn't preach—he reflects. And in those reflections, you might find your own understanding deepening. This book is for those who want to understand not just what Bitcoin is, but what it means.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Philosophical Masterpiece</div>
+                        <div class="text-gray-400">The most thoughtful book about what Bitcoin teaches us.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

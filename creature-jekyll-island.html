@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - The Creature from Jekyll Island</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #065f46, #10b981);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">35 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-emerald-800 text-emerald-100 rounded-full text-sm font-medium mb-4">Exposé / History</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">The Creature from Jekyll Island</h1>
+                    <p class="text-xl text-emerald-200 mb-4">A Second Look at the Federal Reserve</p>
+                    <p class="text-emerald-300 mb-6">By <span class="font-semibold text-white">G. Edward Griffin</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🏛️ Federal Reserve</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🕵️ Banking Cartel</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">📜 History</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-emerald-700 to-green-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-emerald-600">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">🦑</div>
+                            <div class="font-serif font-bold leading-tight text-sm">The Creature from Jekyll Island</div>
+                            <div class="text-xs text-gray-500 mt-2">G. Edward Griffin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    "The Creature from Jekyll Island" is a comprehensive exposé of the Federal Reserve System. Griffin reveals that the Fed was created in secret by a cartel of the world's most powerful bankers, not to stabilize the economy, but to protect and enrich themselves. The book traces how the Fed enables endless government spending, perpetual war, boom-bust cycles, and the hidden tax of inflation. It's not anti-bank—it's anti-cartel, anti-secrecy, and pro-free-market money.
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">The Secret Meeting</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">The Banking Cartel</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">The Mandrake Mechanism</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">War & The Fed</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">Bailouts & Moral Hazard</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-emerald-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">The Solution</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Secret Meeting on Jekyll Island</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    In November 1910, a group of the most powerful men in America boarded a private train car in New Jersey. They traveled under assumed names to a private club on Jekyll Island, Georgia. Their mission: to draft legislation for a central bank that would give them control over the nation's money supply.
+                </p>
+                
+                <div class="bg-emerald-50 p-6 rounded-xl mb-6 border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 mb-4">🕵️ The Attendees</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Nelson Aldrich</h5>
+                            <p class="text-xs text-gray-600">Republican Senator, Father-in-law to Rockefeller</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Abraham Piatt Andrew</h5>
+                            <p class="text-xs text-gray-600">Assistant Secretary of the Treasury</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Frank Vanderlip</h5>
+                            <p class="text-xs text-gray-600">President of National City Bank (Rockefeller)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Henry Davison</h5>
+                            <p class="text-xs text-gray-600">Senior Partner at J.P. Morgan</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Charles Norton</h5>
+                            <p class="text-xs text-gray-600">President of First National Bank of New York</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold text-sm">Paul Warburg</h5>
+                            <p class="text-xs text-gray-600">Partner at Kuhn, Loeb & Co. (Rothschild agent)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-emerald-50 p-6 rounded-r-xl mb-6 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">These men represented approximately 1/4 of the world's wealth. They were competitors in public, but here they worked together to create a banking cartel disguised as a government agency. The secrecy was essential—if the public knew bankers wrote the bill, it would never pass.</p>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The participants admitted the secrecy decades later. Frank Vanderlip wrote in 1935: <em>"I was as secretive—indeed, as furtive—as any conspirator... Discovery, we knew, simply must not happen, or else all our time and effort would be wasted."</em>
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Nature of the Banking Cartel</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin explains that the Federal Reserve is not federal (it's privately owned) and has no reserves (it creates money from nothing). It is a cartel—a group of competitors who agree to limit competition and protect each other from losses.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🎯 Goals of the Cartel</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+                            <span><strong>Stop Competition:</strong> Prevent new banks from challenging the big players.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+                            <span><strong>Obtain Franchise to Create Money:</strong> Get the exclusive, legal right to create money out of thin air.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+                            <span><strong>Control Reserves:</strong> Pool reserves so all banks can inflate together without one failing before others.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">4</span>
+                            <span><strong>Shift Losses to Taxpayers:</strong> Make the public bail out banks when they fail ("too big to fail").</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-red-100 text-red-600 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">5</span>
+                            <span><strong>Convince Congress This Is for the Public:</strong> Use propaganda to sell it as "economic stability."</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="key-point bg-emerald-50 p-6 rounded-r-xl mb-6 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The Fed was sold to the public as protection against bank panics. In reality, it was designed to protect <em>bankers</em> from the consequences of their own reckless lending. The public bears the risk; the bankers keep the profits.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Mandrake Mechanism: Money from Nothing</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin names the money creation process the "Mandrake Mechanism" after the comic-book magician who creates things out of thin air. This is how it works:
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-emerald-400 mb-4 text-xl">🪄 How Money Is Created from Nothing</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Government Needs Money</h5>
+                                <p class="text-gray-300">Congress wants to spend more than it collects in taxes. It issues Treasury Bonds (IOUs).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">The Fed "Buys" Bonds</h5>
+                                <p class="text-gray-300">The Fed purchases these bonds, but with what? It simply writes a check on itself—money that didn't exist before.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Banks Multiply the Money</h5>
+                                <p class="text-gray-300">This new money enters banks, which lend out 90% of it (fractional reserve). Each loan creates <em>new</em> deposits, which are lent again.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <h5 class="font-bold">Money Supply Explodes</h5>
+                                <p class="text-gray-300">Through this multiplier effect, $1 billion in Fed purchases can become $10+ billion in the economy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">5</span>
+                            <div>
+                                <h5 class="font-bold">Inflation Follows</h5>
+                                <p class="text-gray-300">More money chasing the same goods = higher prices. Your savings lose purchasing power.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-emerald-50 p-6 rounded-r-xl mb-6 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"It is difficult to comprehend that our money is created out of nothing. It seems too bizarre to be true. But that's exactly how it works."<br><br>The government gets to spend first (before prices rise), the bankers collect interest on money they created from nothing, and the public pays through the hidden tax of inflation.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">War and the Federal Reserve</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin dedicates significant attention to how the Fed enables war. Before central banking, governments had to raise taxes or borrow from citizens to fund wars. This was unpopular and limited military adventures. With the Fed, governments can simply print money.
+                </p>
+
+                <div class="bg-red-50 border border-red-200 p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-red-800 mb-4">💣 Wars Financed by the Fed</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold">World War I</h5>
+                            <p class="text-gray-600">The Fed was created in 1913. WWI started in 1914. Coincidence? The Fed financed US entry in 1917.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold">World War II</h5>
+                            <p class="text-gray-600">US debt exploded from $40B to $260B. The Fed bought war bonds to keep interest rates low.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold">Vietnam War</h5>
+                            <p class="text-gray-600">"Guns and butter"—LBJ funded both war and welfare without raising taxes. Inflation followed.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-bold">Post-9/11 Wars</h5>
+                            <p class="text-gray-600">$8+ trillion spent on Afghanistan/Iraq. No war tax. Just printed money and added to the debt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-emerald-50 p-6 rounded-r-xl mb-6 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Without the Federal Reserve, the great wars of the 20th century could not have been financed." The ability to print money removes the natural check on government war-making: the need to ask citizens to pay for it directly.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Bailouts and Moral Hazard</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin documents how the Fed's role as "lender of last resort" has created a system of perpetual bailouts. When banks make reckless bets, they keep the profits. When those bets fail, the Fed (and ultimately taxpayers) covers the losses.
+                </p>
+
+                <div class="space-y-4 mb-6">
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">1984</div>
+                            <div>
+                                <h4 class="font-bold">Continental Illinois</h4>
+                                <p class="text-sm text-gray-600">The 7th largest US bank was bailed out. First use of "too big to fail" doctrine.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">1980s</div>
+                            <div>
+                                <h4 class="font-bold">Savings & Loan Crisis</h4>
+                                <p class="text-sm text-gray-600">$160 billion bailout. Bankers who caused it faced minimal consequences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">1998</div>
+                            <div>
+                                <h4 class="font-bold">Long-Term Capital Management</h4>
+                                <p class="text-sm text-gray-600">Fed organized a $3.6B bailout of a hedge fund to prevent "systemic risk."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">2008</div>
+                            <div>
+                                <h4 class="font-bold">Global Financial Crisis</h4>
+                                <p class="text-sm text-gray-600">$700B TARP + trillions in Fed lending. Banks repaid bonuses while homeowners lost homes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0">2020</div>
+                            <div>
+                                <h4 class="font-bold">COVID Response</h4>
+                                <p class="text-sm text-gray-600">Fed balance sheet from $4T to $9T. Direct purchases of corporate bonds—unprecedented.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-emerald-50 p-6 rounded-r-xl mb-6 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Each bailout is larger than the last because moral hazard compounds. Banks know they'll be saved, so they take bigger risks. The system doesn't prevent crises—it guarantees that each one is worse than the last.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Solution: Abolish the Fed</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin doesn't just complain—he proposes a solution. He advocates for the complete abolition of the Federal Reserve and a return to a monetary system based on honest commodity money (gold/silver).
+                </p>
+
+                <div class="bg-gradient-to-br from-emerald-50 to-green-50 p-8 rounded-2xl mb-6 border border-emerald-200">
+                    <h4 class="font-bold text-gray-800 mb-4 text-xl">🛠️ Griffin's Prescription</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="text-green-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Abolish the Federal Reserve</h5>
+                                <p class="text-gray-600">End the cartel's monopoly on money creation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-green-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Repeal Legal Tender Laws</h5>
+                                <p class="text-gray-600">Let the market choose what is money. Competition in currencies.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-green-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Define Dollar as Weight of Gold</h5>
+                                <p class="text-gray-600">Return to honest, measurable money that can't be inflated.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-green-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">No Bailouts</h5>
+                                <p class="text-gray-600">Let bad banks fail. End moral hazard.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-green-500 font-bold text-xl">✓</span>
+                            <div>
+                                <h5 class="font-bold">Balanced Budget Amendment</h5>
+                                <p class="text-gray-600">Government must live within its means.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Griffin acknowledges these changes are politically difficult. But he argues the alternative—continued inflation, ever-larger crises, and eventual currency collapse—is far worse.
+                </p>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500 card-hover">
+                    <div class="text-3xl mb-3">🕵️</div>
+                    <h3 class="font-bold text-lg mb-2">Created in Secret</h3>
+                    <p class="text-gray-600">The Fed was designed by bankers, for bankers, in a secret meeting on a private island.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500 card-hover">
+                    <div class="text-3xl mb-3">🪄</div>
+                    <h3 class="font-bold text-lg mb-2">Money from Nothing</h3>
+                    <p class="text-gray-600">The Fed creates money out of thin air, which is lent at interest. This is the Mandrake Mechanism.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500 card-hover">
+                    <div class="text-3xl mb-3">💣</div>
+                    <h3 class="font-bold text-lg mb-2">Enables War</h3>
+                    <p class="text-gray-600">Without the ability to print money, governments couldn't finance major wars without explicit taxation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500 card-hover">
+                    <div class="text-3xl mb-3">🔄</div>
+                    <h3 class="font-bold text-lg mb-2">Bailouts Guarantee Bigger Crises</h3>
+                    <p class="text-gray-600">Each bailout creates moral hazard, ensuring the next crisis is even larger.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "The Creature from Jekyll Island" is a dense, meticulously researched, and at times infuriating book. Whether you agree with all of Griffin's conclusions or not, the historical record he presents is invaluable. The Fed was created in secrecy, it benefits the banking cartel at the expense of ordinary people, and its track record of "stability" is one of endless inflation, bailouts, and war. This is essential reading for anyone who wants to understand why our monetary system is broken.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">The Definitive Fed Exposé</div>
+                        <div class="text-gray-400">Dense but essential. Read it and share it.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

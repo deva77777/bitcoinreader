@@ -1,0 +1,32 @@
+# Wealth Book Summaries
+# https://wealthbooksummaries.com
+
+Description: A curated library of detailed book summaries on Economics, Bitcoin, Investing, and Wealth Psychology.
+
+## Core Pages
+- https://wealthbooksummaries.com/ (Library Home)
+- https://wealthbooksummaries.com/about.html
+- https://wealthbooksummaries.com/contact.html
+
+## Economics & Money Summaries
+- The Bitcoin Standard: https://wealthbooksummaries.com/bitcoin-standard.html
+- What Has Government Done to Our Money?: https://wealthbooksummaries.com/government-money.html
+- Economics in One Lesson: https://wealthbooksummaries.com/economics-in-one-lesson.html
+- Principles of Economics: https://wealthbooksummaries.com/principles-of-economics.html
+- The Fiat Standard: https://wealthbooksummaries.com/fiat-standard.html
+- The Price of Tomorrow: https://wealthbooksummaries.com/price-of-tomorrow.html
+- Broken Money: https://wealthbooksummaries.com/broken-money.html
+- The Creature from Jekyll Island: https://wealthbooksummaries.com/creature-jekyll-island.html
+- The Sovereign Individual: https://wealthbooksummaries.com/sovereign-individual.html
+
+## Wealth Psychology & Investing Summaries
+- The Psychology of Money: https://wealthbooksummaries.com/psychology-of-money.html
+- Antifragile: https://wealthbooksummaries.com/antifragile.html
+- The Intelligent Investor: https://wealthbooksummaries.com/intelligent-investor.html
+- Thinking, Fast and Slow: https://wealthbooksummaries.com/thinking-fast-slow.html
+
+## Bitcoin Deep Dives
+- Gradually, Then Suddenly: https://wealthbooksummaries.com/gradually-then-suddenly.html
+- 21 Lessons: https://wealthbooksummaries.com/21-lessons.html
+- Inventing Bitcoin: https://wealthbooksummaries.com/inventing-bitcoin.html
+- Thank God for Bitcoin: https://wealthbooksummaries.com/thank-god-for-bitcoin.html

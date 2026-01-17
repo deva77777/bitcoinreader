@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intelligent Investor Summary - Book Insights</title>
+    <meta name="description" content="Comprehensive summary of The Intelligent Investor by Benjamin Graham. Master value investing principles that Warren Buffett calls 'the best book on investing ever written.'">
+    <meta name="keywords" content="Intelligent Investor, Benjamin Graham, summary, value investing, Warren Buffett, margin of safety, Mr. Market">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #1e3a5f, #3b82f6);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">28 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 py-16 md:py-24 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-blue-700 text-blue-100 rounded-full text-sm font-medium mb-4">Classic Investing</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 leading-tight">The Intelligent Investor</h1>
+                    <p class="text-xl text-blue-200 mb-4">The Definitive Book on Value Investing</p>
+                    <p class="text-blue-300 mb-6">By <span class="font-semibold text-white">Benjamin Graham</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">📈 Value Investing</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">🛡️ Margin of Safety</span>
+                        <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white shadow-sm">👤 Mr. Market</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl p-6 shadow-2xl book-cover-animation border border-blue-500">
+                        <div class="bg-white text-gray-900 rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">📊</div>
+                            <div class="font-serif font-bold leading-tight text-sm">The Intelligent Investor</div>
+                            <div class="text-xs text-gray-500 mt-2">Benjamin Graham</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    First published in 1949, "The Intelligent Investor" is the bible of value investing. Benjamin Graham—Warren Buffett's teacher—lays out principles for long-term investing that have stood the test of time. The book's core message: investing is most intelligent when it is most businesslike. Don't speculate, don't follow the crowd, buy with a margin of safety, and think like an owner, not a trader.
+                </p>
+            </div>
+        </section>
+
+        <!-- Buffett Endorsement -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">
+                <h3 class="font-bold text-blue-900 mb-4 text-xl">🏆 Warren Buffett's Endorsement</h3>
+                <blockquote class="text-lg italic text-gray-700 border-l-4 border-blue-500 pl-4">
+                    "By far the best book on investing ever written."
+                </blockquote>
+                <p class="text-sm text-gray-600 mt-4">— Warren Buffett, the world's most successful investor, who studied under Graham at Columbia University</p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> Key Principles Explored
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#principle1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">Investing vs. Speculation</h3>
+                </a>
+                <a href="#principle2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">Mr. Market Allegory</h3>
+                </a>
+                <a href="#principle3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">Margin of Safety</h3>
+                </a>
+                <a href="#principle4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">Defensive vs. Enterprising Investor</h3>
+                </a>
+                <a href="#principle5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">Stock Selection Criteria</h3>
+                </a>
+                <a href="#principle6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-blue-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">The Investor's Temperament</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Principle 1 -->
+        <article id="principle1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Investing vs. Speculation</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Graham makes a crucial distinction right from the start. Most people who think they're investing are actually speculating. Understanding the difference is fundamental.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">📊</div>
+                        <h4 class="font-bold text-green-800 mb-2">Investing</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>✅ Based on thorough analysis</li>
+                            <li>✅ Promises safety of principal</li>
+                            <li>✅ Expects an adequate return</li>
+                            <li>✅ Focuses on the underlying business</li>
+                            <li>✅ Holds for the long term</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🎰</div>
+                        <h4 class="font-bold text-red-800 mb-2">Speculation</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>❌ Based on tips, hunches, or momentum</li>
+                            <li>❌ Risks losing principal</li>
+                            <li>❌ Hopes for extraordinary returns</li>
+                            <li>❌ Focuses on stock price movements</li>
+                            <li>❌ Trades frequently</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Principle 2 -->
+        <article id="principle2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Mr. Market Allegory</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This is Graham's most famous teaching—a brilliant metaphor for understanding stock market behavior.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-blue-400 mb-4 text-xl">👤 Meet Mr. Market</h4>
+                    <p class="text-gray-300 mb-4">Imagine you own a share of a business with a partner named Mr. Market. Every day, Mr. Market shows up at your door and offers to either buy your share or sell you his—at a price he sets.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-green-900/30 p-4 rounded-lg">
+                            <div class="text-2xl mb-2">😊</div>
+                            <h5 class="font-bold text-green-300">Some Days He's Euphoric</h5>
+                            <p class="text-sm text-gray-400">He offers extremely high prices. He sees nothing but blue skies ahead.</p>
+                        </div>
+                        <div class="bg-red-900/30 p-4 rounded-lg">
+                            <div class="text-2xl mb-2">😰</div>
+                            <h5 class="font-bold text-red-300">Other Days He's Depressed</h5>
+                            <p class="text-sm text-gray-400">He offers rock-bottom prices. He sees nothing but doom.</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mt-6">The key? <strong>Mr. Market is there to serve you, not to guide you.</strong> You're free to ignore him. His emotional state tells you nothing about the actual value of the business.</p>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The market is there to serve you, not to instruct you." Use Mr. Market's emotions to your advantage—buy when he's fearful, consider selling when he's euphoric.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Principle 3 -->
+        <article id="principle3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Margin of Safety: The Central Concept</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This is the most important concept in the book—the one Warren Buffett says he has written on his office wall. The margin of safety protects you from bad luck, bad timing, and bad analysis.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🛡️ What Is Margin of Safety?</h4>
+                    <div class="space-y-4">
+                        <p class="text-gray-700">When building a bridge that must support 10,000 pounds, an engineer designs it to hold 30,000 pounds. That extra capacity is the margin of safety.</p>
+                        <p class="text-gray-700">In investing: if you calculate a stock is worth $100, don't buy it at $95. Wait until it's $60 or $70. The difference is your margin of safety.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg mt-6">
+                        <div class="flex items-center gap-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-800">$100</div>
+                                <div class="text-xs text-gray-600">Intrinsic Value</div>
+                            </div>
+                            <div class="text-3xl text-gray-400">→</div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-green-600">$65</div>
+                                <div class="text-xs text-gray-600">Buy Price</div>
+                            </div>
+                            <div class="text-3xl text-gray-400">=</div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-orange-600">35%</div>
+                                <div class="text-xs text-gray-600">Margin of Safety</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"Confronted with a challenge to distill the secret of sound investment into three words, we venture the motto: MARGIN OF SAFETY."</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Principle 4 -->
+        <article id="principle4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Defensive vs. Enterprising Investor</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Graham recognizes that not everyone has the time, interest, or temperament for deep stock analysis. He offers two paths:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🛡️</div>
+                        <h4 class="font-bold text-blue-800 mb-2">Defensive (Passive) Investor</h4>
+                        <p class="text-sm text-gray-600 mb-4">Wants safety and freedom from bother. Minimal effort.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• Diversified portfolio (10-30 stocks)</li>
+                            <li>• Large, established companies</li>
+                            <li>• Consistent dividend history</li>
+                            <li>• Simple stock/bond allocation</li>
+                            <li>• Rebalance annually</li>
+                        </ul>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                        <div class="text-3xl mb-2">🎯</div>
+                        <h4 class="font-bold text-orange-800 mb-2">Enterprising (Active) Investor</h4>
+                        <p class="text-sm text-gray-600 mb-4">Willing to devote time and effort for better returns.</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• Deep fundamental analysis</li>
+                            <li>• Search for undervalued stocks</li>
+                            <li>• Special situations & arbitrage</li>
+                            <li>• Contrarian positions</li>
+                            <li>• More concentrated portfolio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The investor's chief problem—and even his worst enemy—is likely to be himself." Choose the approach that fits your temperament, and stick to it.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Principle 5 -->
+        <article id="principle5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Stock Selection Criteria</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Graham provides specific, quantitative criteria for selecting stocks. These are filters to protect against overpaying or buying weak companies.
+                </p>
+
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">📋 Graham's Selection Criteria (Defensive Investor)</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">1</span>
+                            <span><strong>Size:</strong> Large companies (sales > $100 million at the time—adjust for inflation)</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">2</span>
+                            <span><strong>Financial Strength:</strong> Current assets ≥ 2x current liabilities</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">3</span>
+                            <span><strong>Earnings Stability:</strong> Positive earnings for 10 consecutive years</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">4</span>
+                            <span><strong>Dividend Record:</strong> Uninterrupted dividends for 20+ years</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">5</span>
+                            <span><strong>Earnings Growth:</strong> 33%+ growth in EPS over 10 years</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">6</span>
+                            <span><strong>P/E Ratio:</strong> ≤ 15x average earnings over 3 years</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-bold">7</span>
+                            <span><strong>P/B Ratio:</strong> ≤ 1.5x book value (or P/E × P/B ≤ 22.5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">These aren't magic formulas—they're filters to keep you out of trouble. The goal is to avoid overpaying for overvalued or financially weak companies.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Principle 6 -->
+        <article id="principle6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Principle 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Investor's Temperament</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Graham emphasizes that investing success depends more on character than intellect. The market will test you emotionally—only those with the right temperament will succeed.
+                </p>
+
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border border-blue-200">
+                    <h4 class="font-bold text-blue-900 mb-4">🧘 Traits of a Successful Investor</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm mb-2">😌 Patience</h5>
+                            <p class="text-xs text-gray-600">Willing to wait for the right opportunity and hold through volatility.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm mb-2">📚 Discipline</h5>
+                            <p class="text-xs text-gray-600">Sticks to the strategy even when it's uncomfortable or unpopular.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm mb-2">🧠 Independent Thinking</h5>
+                            <p class="text-xs text-gray-600">Forms opinions based on analysis, not the crowd.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-sm mb-2">🎯 Focus on Value</h5>
+                            <p class="text-xs text-gray-600">Ignores price fluctuations and focuses on underlying business value.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-blue-50 p-6 rounded-r-xl mb-6 border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">"The investor's chief problem—and even his worst enemy—is likely to be himself." Master your emotions, and you've won half the battle.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 card-hover">
+                    <div class="text-3xl mb-3">🛡️</div>
+                    <h3 class="font-bold text-lg mb-2">Margin of Safety</h3>
+                    <p class="text-gray-600">Never buy without a cushion between price and value. This protects against errors and bad luck.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 card-hover">
+                    <div class="text-3xl mb-3">👤</div>
+                    <h3 class="font-bold text-lg mb-2">Mr. Market Is Your Servant</h3>
+                    <p class="text-gray-600">Use the market's mood swings to your advantage. Don't let them control you.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 card-hover">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-bold text-lg mb-2">Invest, Don't Speculate</h3>
+                    <p class="text-gray-600">Base decisions on analysis and business fundamentals, not tips or momentum.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 card-hover">
+                    <div class="text-3xl mb-3">🧘</div>
+                    <h3 class="font-bold text-lg mb-2">Master Your Emotions</h3>
+                    <p class="text-gray-600">Temperament matters more than IQ. Your worst enemy is yourself.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    "The Intelligent Investor" is not a get-rich-quick book. It's the opposite: a patient, disciplined approach that has built more lasting wealth than any trading strategy. Graham's principles—written over 70 years ago—remain relevant because they're based on eternal truths about human behavior, not on market tricks. If you read one book on investing, make it this one.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">Timeless Classic</div>
+                        <div class="text-gray-400">The most important investing book ever written.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

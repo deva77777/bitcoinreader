@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Insights - Principles of Economics</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" class="reading-progress" style="width: 0%; background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl">📚</span>
+                    <span class="font-bold text-xl">Book<span class="gradient-text">Insights</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-500" id="read-time">30 min read</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-block px-3 py-1 bg-violet-100 text-violet-800 rounded-full text-sm font-medium mb-4">Foundational Text</span>
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Principles of Economics</h1>
+                    <p class="text-xl text-gray-600 mb-4">The Book That Revolutionized Economic Thought</p>
+                    <p class="text-gray-500 mb-6">By <span class="font-semibold text-gray-700">Carl Menger</span></p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">💎 Subjective Value</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">📊 Marginal Utility</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-sm text-gray-600 shadow-sm">🏛️ Austrian School</span>
+                    </div>
+                </div>
+                <div class="w-48 md:w-64 flex-shrink-0">
+                    <div class="bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl p-6 shadow-2xl book-cover-animation">
+                        <div class="bg-white rounded-xl p-4 text-center">
+                            <div class="text-6xl mb-2">💎</div>
+                            <div class="font-serif font-bold text-gray-900 leading-tight">Principles of Economics</div>
+                            <div class="text-xs text-gray-500 mt-2">Carl Menger</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Quick Summary -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 card-hover">
+                <h2 class="font-serif text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-2xl">⚡</span> Quick Summary
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Published in 1871, Carl Menger's "Principles of Economics" (Grundsätze der Volkswirtschaftslehre) is the founding text of the Austrian School of Economics. It shattered the old "Classical" labor theories of value by proving that <strong>value is subjective</strong>—it exists entirely in the mind of the individual, not in the object itself. Menger explains how prices, money, and markets emerge naturally from individuals acting to satisfy their unique needs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="mb-16">
+            <h2 class="font-serif text-2xl font-bold mb-6 flex items-center gap-2">
+                <span class="text-2xl">📑</span> What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#chapter1" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">01</span>
+                    <h3 class="font-semibold mt-1">The Nature of Goods</h3>
+                </a>
+                <a href="#chapter2" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">02</span>
+                    <h3 class="font-semibold mt-1">Value is Subjective</h3>
+                </a>
+                <a href="#chapter3" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">03</span>
+                    <h3 class="font-semibold mt-1">Marginal Utility</h3>
+                </a>
+                <a href="#chapter4" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">04</span>
+                    <h3 class="font-semibold mt-1">The Theory of Exchange</h3>
+                </a>
+                <a href="#chapter5" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">05</span>
+                    <h3 class="font-semibold mt-1">Price Formation</h3>
+                </a>
+                <a href="#chapter6" class="chapter-card bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg transition-all cursor-pointer">
+                    <span class="text-violet-600 font-bold">06</span>
+                    <h3 class="font-semibold mt-1">The Origin of Money</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chapter 1 -->
+        <article id="chapter1" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The General Theory of the Good</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Menger starts with the basics: What is a "good"? For a thing to become a good (or have "goods-character"), four conditions must be met:
+                </p>
+                
+                <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl mb-6">
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 font-bold">1.</span>
+                            <span>A human need must exist.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 font-bold">2.</span>
+                            <span>The object must have properties capable of satisfying that need.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 font-bold">3.</span>
+                            <span>Humans must have <em>knowledge</em> of this causal connection.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 font-bold">4.</span>
+                            <span>Humans must have command (control) over the object.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Menger also introduces the concept of <strong>Orders of Goods</strong>.
+                    <br><br>
+                    <strong>First Order Goods:</strong> Things we consume directly (e.g., bread).
+                    <br>
+                    <strong>Higher Order Goods:</strong> Things used to produce first-order goods (e.g., flour, oven, labor).
+                </p>
+
+                <div class="key-point bg-violet-50 p-6 rounded-r-xl mb-6 border-l-4 border-violet-500">
+                    <h4 class="font-bold text-violet-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">The value of higher-order goods (production) is derived entirely from the anticipated value of the first-order goods (consumption) they create. We value the oven only because we value the bread.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article id="chapter2" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Value is Subjective</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Before Menger, economists thought value came from labor (Marx/Smith) or costs of production. Menger proved this wrong. If you spend 1,000 hours making a mud pie, it still has zero value if no one wants it.
+                </p>
+
+                <div class="bg-gradient-to-r from-violet-50 to-purple-50 p-6 rounded-xl mb-6">
+                    <h4 class="font-bold text-violet-900 mb-4 text-lg">💡 The Subjective Revolution</h4>
+                    <p class="text-gray-700 italic mb-4">"Value does not exist outside the consciousness of men... Value is the importance that individual goods or quantities of goods attain for us because we are conscious of being dependent on command of them for the satisfaction of our needs."</p>
+                    <div class="text-sm text-gray-600 font-semibold">— Carl Menger</div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Value is a judgment made by an economizing individual. It varies from person to person, and for the same person at different times. A glass of water is worthless to a diver in a lake, but priceless to a man in a desert.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article id="chapter3" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Marginal Utility</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This is Menger's most famous contribution (discovered simultaneously by Jevons and Walras). How do we value a specific unit of a good?
+                </p>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Imagine a farmer with 5 sacks of grain:
+                </p>
+
+                <div class="space-y-2 mb-6">
+                    <div class="flex items-center gap-4 bg-white p-3 rounded shadow-sm">
+                        <span class="bg-violet-100 text-violet-800 w-8 h-8 flex items-center justify-center rounded-full font-bold">1</span>
+                        <div class="flex-1">Food for survival (Highest value)</div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-3 rounded shadow-sm">
+                        <span class="bg-violet-100 text-violet-800 w-8 h-8 flex items-center justify-center rounded-full font-bold">2</span>
+                        <div class="flex-1">Seed for next year's crop</div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-3 rounded shadow-sm">
+                        <span class="bg-violet-100 text-violet-800 w-8 h-8 flex items-center justify-center rounded-full font-bold">3</span>
+                        <div class="flex-1">Feed for farm animals</div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-3 rounded shadow-sm">
+                        <span class="bg-violet-100 text-violet-800 w-8 h-8 flex items-center justify-center rounded-full font-bold">4</span>
+                        <div class="flex-1">Making whiskey</div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-3 rounded shadow-sm opacity-75">
+                        <span class="bg-gray-200 text-gray-600 w-8 h-8 flex items-center justify-center rounded-full font-bold">5</span>
+                        <div class="flex-1">Feeding a pet parrot (Lowest value)</div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-violet-50 p-6 rounded-r-xl mb-6 border-l-4 border-violet-500">
+                    <h4 class="font-bold text-violet-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">If the farmer loses <strong>one</strong> sack, he doesn't cut back on all activities equally. He gives up the <em>least important</em> use (feeding the parrot). Therefore, the value of <em>any</em> single sack is equal to the satisfaction provided by the <strong>least valuable unit</strong> (the marginal unit).</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article id="chapter4" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Theory of Exchange</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Why do people trade? Not because goods have equal value, but because they have <strong>unequal</strong> value to the traders.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white border border-gray-200 p-6 rounded-xl text-center">
+                        <div class="text-4xl mb-2">👨‍🌾</div>
+                        <h4 class="font-bold">Farmer A</h4>
+                        <p class="text-sm text-gray-600">Has a Horse 🐴</p>
+                        <p class="text-sm text-gray-600">Values Cow > Horse</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-6 rounded-xl text-center">
+                        <div class="text-4xl mb-2">👩‍🌾</div>
+                        <h4 class="font-bold">Farmer B</h4>
+                        <p class="text-sm text-gray-600">Has a Cow 🐮</p>
+                        <p class="text-sm text-gray-600">Values Horse > Cow</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    If they swap, <strong>both</strong> are better off. Exchange is not a zero-sum game; it creates value by moving goods to where they are more highly valued. Menger emphasizes that there is no "objective" equality in exchange—people trade precisely because they value what they get more than what they give up.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 5 -->
+        <article id="chapter5" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">Price Formation</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Prices are not set by costs; they are determined by the competition between buyers and sellers for the marginal unit.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    In a bilateral monopoly (one buyer, one seller), the price is indeterminate within a range. As more buyers and sellers enter the market, the range narrows. The market price ultimately settles between the limit set by the least eager buyer and the least eager seller who actually transact.
+                </p>
+            </div>
+        </article>
+
+        <!-- Chapter 6 -->
+        <article id="chapter6" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold mb-6">The Origin of Money</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This chapter provides the theoretical foundation for "The Bitcoin Standard." Menger asks: How did we go from barter to using small metal discs? Did the government invent it? No.
+                </p>
+
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl mb-6">
+                    <h4 class="font-bold text-violet-400 mb-4 text-xl">🚀 Evolution of Money</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-violet-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">Direct Exchange (Barter)</h5>
+                                <p class="text-gray-300">Hard to find a double coincidence of wants.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-violet-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">Saleability</h5>
+                                <p class="text-gray-300">People realize some goods (salt, cattle) are easier to sell than others.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-violet-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <h5 class="font-bold">Medium of Exchange</h5>
+                                <p class="text-gray-300">People trade their goods for the "more saleable" good, not to consume it, but to trade it later.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="bg-violet-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <h5 class="font-bold">Money</h5>
+                                <p class="text-gray-300">Eventually, one commodity becomes the <em>most</em> saleable (Gold/Silver) and becomes the universal medium of exchange.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-point bg-violet-50 p-6 rounded-r-xl mb-6 border-l-4 border-violet-500">
+                    <h4 class="font-bold text-violet-800 mb-2">🔑 Key Insight</h4>
+                    <p class="text-gray-700">Money is not a creation of the state. It is a spontaneous social institution that emerged from individuals acting in their own self-interest to improve their trading situation.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Key Takeaways -->
+        <section class="mb-16">
+            <h2 class="font-serif text-3xl font-bold mb-8 text-center">📝 Key Takeaways</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🧠</div>
+                    <h3 class="font-bold text-lg mb-2">Subjective Value</h3>
+                    <p class="text-gray-600">Value is in the eye of the beholder, not in the object itself or the labor used to create it.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">📉</div>
+                    <h3 class="font-bold text-lg mb-2">Marginal Utility</h3>
+                    <p class="text-gray-600">We value goods based on the satisfaction of the least important need that a specific unit can fulfill.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">🏗️</div>
+                    <h3 class="font-bold text-lg mb-2">Structure of Production</h3>
+                    <p class="text-gray-600">Capital goods (ovens) only have value because consumer goods (bread) have value.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-violet-500 card-hover">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h3 class="font-bold text-lg mb-2">Origin of Money</h3>
+                    <p class="text-gray-600">Money emerged naturally from the market as the most saleable commodity, without central planning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl">
+                <h2 class="font-serif text-3xl font-bold mb-6">Final Thoughts</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    Carl Menger's "Principles of Economics" is more than just a textbook; it is the intellectual bedrock of the Austrian School. By placing the human mind and individual action at the center of economic analysis, Menger provided the tools necessary to understand everything from price formation to the nature of money itself.
+                </p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-700">
+                    <div class="text-4xl">⭐⭐⭐⭐⭐</div>
+                    <div>
+                        <div class="font-bold">The Original Masterpiece</div>
+                        <div class="text-gray-400">Essential for understanding the roots of sound economics.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Section -->
+        <section class="text-center pb-12">
+            <h3 class="font-serif text-2xl font-bold mb-4">Found this helpful?</h3>
+            <p class="text-gray-600 mb-6">Share this summary with others.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button onclick="shareOnTwitter()" class="share-btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    Twitter
+                </button>
+                <button onclick="shareOnLinkedIn()" class="share-btn bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </button>
+                <button onclick="copyLink()" class="share-btn bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-3xl mb-4">📚</div>
+            <h3 class="font-bold text-xl mb-2">Book<span class="text-orange-400">Insights</span></h3>
+            <p class="text-gray-400 mb-6">Making wisdom accessible, one book at a time.</p>
+            <p class="text-gray-500 text-sm">© 2024 BookInsights. All summaries are for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
