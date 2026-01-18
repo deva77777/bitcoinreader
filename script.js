@@ -1,3 +1,25 @@
+// Google Analytics Setup
+// 🔴 TODO: Replace 'G-XXXXXXXXXX' with your actual Tracking ID from Google Analytics
+const GA_TRACKING_ID = 'G-XXXXXXXXXX';
+
+function loadGoogleAnalytics() {
+    if (GA_TRACKING_ID === 'G-XXXXXXXXXX' || !GA_TRACKING_ID) return; // Don't load if ID isn't set
+
+    // Create the script tag: <script async src="https://www.googletagmanager.com/gtag/js?id=..."></script>
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+
+    // Initialize the dataLayer
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_TRACKING_ID);
+    
+    console.log('Google Analytics loaded:', GA_TRACKING_ID);
+}
+
 // Reading Progress Bar (Optimized)
 let ticking = false;
 
@@ -172,6 +194,7 @@ function initActiveChapterHighlighting() {
 
 // Initialize Everything on DOM Load
 document.addEventListener('DOMContentLoaded', () => {
+    loadGoogleAnalytics(); // Load Analytics
     initSmoothScrolling();
     initThemeToggle();
     calculateReadTime();
